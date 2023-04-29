@@ -1,2 +1,2 @@
-# portfolio
+# Portfolio
 Gua's portfolio website.
