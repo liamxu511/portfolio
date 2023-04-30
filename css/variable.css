@@ -1,3 +1,15 @@
 :root {
+  /* font */
   --font-color: #020018;
+
+  /* theme color palette */
+  --theme-60: #4f29fb;
+  --theme-10: #eaedff;
+
+  /* netural color palette */
+  --gray-30: #9a9daf;
+  --gray-10: #d9ddf0;
+
+  /* border */
+  --color-border: var(--gray-10);
 }

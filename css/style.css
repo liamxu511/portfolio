@@ -142,28 +142,45 @@ table {
 }
 
 /* Style */
+
+/* Using flex for the body */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style for the nav */
 nav {
+  position: fixed;
+  padding: 16px;
+  /* background-color: antiquewhite; */
+  width: 100vw;
+}
+
+nav ul {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 40px;
 }
 
-.first-screen {
+/* Styel for the landing page */
+.landing-page {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   height: 100vh;
+  gap: 160px;
 }
 
-.profile-img img {
-  width: 44px;
-  height: 44px;
-}
-
+/* Text, profile image and button */
 .intro {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 8px;
 }
 
@@ -182,6 +199,11 @@ nav {
   line-height: 48px;
 }
 
+.profile-img img {
+  width: 44px;
+  height: 44px;
+}
+
 .intro-text {
   font-family: "Inter";
   font-style: normal;
@@ -189,6 +211,12 @@ nav {
   font-size: 20px;
   line-height: 24px;
 }
+
+.intro .button__secondary {
+  margin-top: 16px;
+}
+
+
 
 .motion {
   width: 500px;

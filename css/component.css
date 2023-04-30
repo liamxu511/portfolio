@@ -1,0 +1,46 @@
+/* Button style */
+
+/* navigation button style */
+.nav_button {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--font-color);
+  text-decoration: none;
+  /* background-color: antiquewhite; */
+  padding: 8px;
+  border-radius: 12px;
+  transition: all 0.1s ease-in-out;
+}
+
+.nav_button:hover {
+  background-color: var(--theme-10);
+  color: var(--theme-60);
+}
+
+/* secondary button styling */
+.button__secondary {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  gap: 8px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--gray-30);
+  border-radius: 16px;
+  border: 1px solid;
+  border-color: var(--color-border);
+  padding: 16px;
+  background-color: white;
+  transition: all 0.1s ease-in-out;
+}
+
+.button__secondary:hover {
+  color: var(--theme-60);
+  background-color: var(--theme-10);
+}
