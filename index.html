@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <link rel="stylesheet" href="css/main.css" />
+    
   </head>
 
   <body>
@@ -28,7 +29,7 @@
             <img src="assets/img/home/profile-img.png" alt="profile-image" />
           </div>
         </div>
-        <p class="intro-text">is not only a product designer</p>
+        <p class="intro-text">is a curiosity-driven product designer</p>
         <button class="button button__secondary">
           more about him
           <svg
@@ -46,9 +47,25 @@
           </svg>
         </button>
       </div>
-      <div class="motion"></div>
+      <canvas id="landing_motion"></canvas>
+      <!-- rive runtime -->
+    <script src="https://unpkg.com/@rive-app/canvas@1.2.0"></script>
+      <script>
+        const r = new rive.Rive({
+            src: "home_motion.riv",
+            // Or the path to a public Rive asset
+            // src: '/public/example.riv',
+            canvas: document.getElementById("landing_motion"),
+            autoplay: true,
+            stateMachines: "State Machine 1",
+            onLoad: () => {
+          r.resizeDrawingSurfaceToCanvas();
+        },
+        });
+    </script>
     </div>
-    <div class="show-reel">
+    <!-- showreel 区域 -->
+    <!-- <div class="show-reel">
       <button class="button button__primary">show reel</button>
       <video
         src="assets/video/show-reel-cut.mov"
@@ -58,6 +75,6 @@
         id="showreel"
       ></video>
       <div class="mask"></div>
-    </div>
+    </div> -->
   </body>
 </html>
