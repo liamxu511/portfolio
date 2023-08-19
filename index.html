@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <link rel="stylesheet" href="css/main.css" />
-    
   </head>
 
   <body>
@@ -17,7 +16,7 @@
         <li><a class="button nav_button" href="#">home</a></li>
         <li><a class="button nav_button" href="#">work</a></li>
         <li><a class="button nav_button" href="#">about</a></li>
-        <li><a class="button nav_button" href="#">contact</a></li>
+        <!-- <li><a class="button nav_button" href="#">contact</a></li> -->
       </ul>
     </nav>
     <!-- landing page -->
@@ -31,7 +30,7 @@
         </div>
         <p class="intro-text">is a curiosity-driven product designer</p>
         <button class="button button__secondary">
-          more about him
+          see his work
           <svg
             class="icon"
             width="16"
@@ -49,20 +48,20 @@
       </div>
       <canvas id="landing_motion"></canvas>
       <!-- rive runtime -->
-    <script src="https://unpkg.com/@rive-app/canvas@1.2.0"></script>
+      <script src="https://unpkg.com/@rive-app/canvas@1.2.0"></script>
       <script>
         const r = new rive.Rive({
-            src: "home_motion.riv",
-            // Or the path to a public Rive asset
-            // src: '/public/example.riv',
-            canvas: document.getElementById("landing_motion"),
-            autoplay: true,
-            stateMachines: "State Machine 1",
-            onLoad: () => {
-          r.resizeDrawingSurfaceToCanvas();
-        },
+          src: "home_motion.riv",
+          // Or the path to a public Rive asset
+          // src: '/public/example.riv',
+          canvas: document.getElementById("landing_motion"),
+          autoplay: true,
+          stateMachines: "State Machine 1",
+          onLoad: () => {
+            r.resizeDrawingSurfaceToCanvas();
+          },
         });
-    </script>
+      </script>
     </div>
     <!-- showreel 区域 -->
     <!-- <div class="show-reel">
