@@ -13,10 +13,13 @@
   <body>
     <nav>
       <ul>
-        <li><a class="button nav_button" href="#">home</a></li>
-        <li><a class="button nav_button" href="#">work</a></li>
-        <li><a class="button nav_button" href="#">about</a></li>
-        <!-- <li><a class="button nav_button" href="#">contact</a></li> -->
+        <li>
+          <a class="button nav_button nav_button-checked" href="index.html"
+            >home</a
+          >
+        </li>
+        <li><a class="button nav_button" href="pages/work.html">work</a></li>
+        <li><a class="button nav_button" href="pages/about.html">about</a></li>
       </ul>
     </nav>
     <!-- landing page -->
@@ -29,7 +32,7 @@
           </div>
         </div>
         <p class="intro-text">is a curiosity-driven product designer</p>
-        <button class="button button__secondary">
+        <a href="pages/work.html" class="button button__secondary">
           see his work
           <svg
             class="icon"
@@ -44,7 +47,7 @@
               fill="currentColor"
             />
           </svg>
-        </button>
+        </a>
       </div>
       <canvas id="landing_motion"></canvas>
       <!-- rive runtime -->

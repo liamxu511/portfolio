@@ -14,7 +14,7 @@
   transition: all 0.1s ease-in-out;
 }
 
-.nav_button:hover {
+.nav_button:hover, .nav_button-checked {
   background-color: var(--theme-10);
   color: var(--theme-60);
 }
