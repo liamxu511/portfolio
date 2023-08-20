@@ -275,6 +275,8 @@ nav ul {
 
   box-shadow: 0px 8px 12px 0px rgba(171, 170, 210, 0.2),
     0px 2px 5px 0px rgba(19, 5, 70, 0.06);
+
+  transition: all 0.2s ease-in-out;
 }
 
 .card_content {
@@ -345,4 +347,228 @@ nav ul {
   font-style: normal;
   font-weight: 400;
   line-height: 22px; /* 157.143% */
+}
+
+/* About page style */
+/* Page Layout */
+#about {
+  margin: 115px 40px 0px 40px;
+  display: flex;
+  max-width: 500px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+#about .title {
+  color: var(--font-color);
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+}
+
+.external_link {
+  color: var(--gray-40);
+  text-decoration: underline;
+}
+
+.external_link:link {
+}
+.external_link:visited {
+}
+.external_link:hover {
+  color: var(--theme-60);
+}
+
+.external_link:active {
+  color: var(--theme-60);
+}
+
+/* Self introduction */
+#self_intro {
+  color: var(--gray-40, #7c7f90);
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 150% */
+}
+
+#self_intro span {
+  color: var(--font-color);
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+#self_intro .icon-theme {
+  color: var(--theme-60);
+}
+
+/* Skills */
+#skills {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  /* align-self: stretch; */
+}
+.skills_tag {
+  display: flex;
+  max-width: 500px;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.skills_tag .tag {
+  display: flex;
+  width: 140px;
+  padding: 12px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: var(--gray-05);
+  color: var(--gray-70);
+  font-size: 16px;
+}
+/* Work Experience */
+#work_experience {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  /* align-self: stretch; */
+}
+
+.timeline_item {
+  display: flex;
+  padding-left: 0px;
+  padding-bottom: 24px;
+  flex-direction: row;
+  align-items: flex-start;
+  position: relative;
+  /* border-left: 1px solid var(--gray-20); */
+}
+
+.timeline_item:last-child {
+  padding-bottom: 0px;
+}
+
+/* Timeline and dots */
+.timeline_left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  top: 6px;
+}
+
+.timeline_dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--gray-20);
+
+  background: #fff;
+  box-shadow: 0px 0px 0px 2px #ffffff;
+  z-index: 99;
+}
+
+#timeline_line-1 {
+  width: 1px;
+  height: 138px;
+  background-color: var(--gray-10);
+}
+
+#timeline_line-2 {
+  width: 1px;
+  height: 114px;
+  background-color: var(--gray-10);
+}
+/* Right side of the timeline */
+.timeline_right {
+  display: flex;
+  padding-left: 24px;
+
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  flex: 1 0 0;
+}
+
+.timeline_right .time {
+  color: var(--gray--30, #9a9daf);
+
+  /* paragraph-small */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 157.143% */
+}
+
+.timeline_right .job {
+  color: var(--gray-gray-40, #7c7f90);
+
+  /* paragraph-regular */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.job .position {
+  color: var(--font-color);
+}
+
+.timeline_right .job_detail {
+  color: var(--gray-gray-40, #7c7f90);
+
+  /* paragraph-regular */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
+/* Education */
+#education {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 80px;
+}
+
+#education p {
+  color: var(--gray-40, #7c7f90);
+
+  /* paragraph-regular */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#education p span {
+  color: var(--font-color, #020018);
+
+  /* paragraph-regular */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
 }
