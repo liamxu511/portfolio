@@ -8,10 +8,11 @@
   --theme-10: #eaedff;
 
   /* netural color palette */
-  --gray-40: #7C7F90;
+  --gray-40: #7c7f90;
   --gray-30: #9a9daf;
+  --gray-20: #b9bdcf;
   --gray-10: #d9ddf0;
-  
+  --gray-05: #eff0f5;
 
   /* border */
   --color-border: var(--gray-10);
