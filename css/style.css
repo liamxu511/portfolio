@@ -273,10 +273,10 @@ nav ul {
   border-radius: 16px;
   border: 1px solid var(--gray-10);
 
-  box-shadow: 0px 8px 12px 0px rgba(171, 170, 210, 0.2),
+  box-shadow: 0px 8px 12px 0px rgba(209, 209, 218, 0.2),
     0px 2px 5px 0px rgba(19, 5, 70, 0.06);
 
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .card_content {
