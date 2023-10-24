@@ -10,6 +10,37 @@
     <title>为轻流设计</title>
   </head>
   <body>
+    <div class="header">
+      <div class="header-content">
+        <div class="back" id="goBackButton">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M13.4779 3.29289C13.0874 2.90237 12.4542 2.90237 12.0637 3.29289L4.04289 11.3137C3.65237 11.7043 3.65237 12.3374 4.04289 12.7279L12.0637 20.7488C12.4542 21.1393 13.0874 21.1393 13.4779 20.7488C13.8685 20.3583 13.8685 19.7251 13.4779 19.3346L7.16421 13.0208H19.1875C19.7398 13.0208 20.1875 12.5731 20.1875 12.0208C20.1875 11.4686 19.7398 11.0208 19.1875 11.0208H7.16421L13.4779 4.70711C13.8685 4.31658 13.8685 3.68342 13.4779 3.29289Z"
+              fill="#B9BDCF"
+            />
+          </svg>
+        </div>
+        <div class="language-switch">English</div>
+        <script>
+          // 获取返回按钮元素
+          var goBackButton = document.getElementById("goBackButton");
+
+          // 添加点击事件监听器
+          goBackButton.addEventListener("click", function () {
+            // 使用 history 对象返回上一页
+            window.history.back();
+          });
+        </script>
+      </div>
+    </div>
     <div class="main-content">
       <div class="title">
         <h1>轻流</h1>
@@ -20,7 +51,33 @@
       </p>
       <div class="test"></div>
       <div id="promo-video">
-        <button class="button button__primary">播放</button>
+        <button class="button button__primary" id="play-button">播放</button>
+        <!-- 点击播放按钮弹出弹窗 -->
+        <div id="video-popup" style="display: none">
+          <video id="video-player" controls>
+            <source
+              src="../../assets/video/product-video.mp4"
+              type="video/mp4"
+            />
+            <!-- 添加其他视频格式的<source>标签，以提供兼容性 -->
+          </video>
+          <script>
+            const playButton = document.getElementById("play-button");
+            const videoPopup = document.getElementById("video-popup");
+            const videoPlayer = document.getElementById("video-player");
+
+            playButton.addEventListener("click", function () {
+              videoPopup.style.display = "flex"; // 显示视频弹出框
+              videoPlayer.play(); // 播放视频
+            });
+
+            // 当用户关闭视频弹出框时，停止视频播放
+            videoPopup.addEventListener("click", function () {
+              // videoPopup.style.display = "none"; // 隐藏视频弹出框
+              videoPlayer.pause(); // 暂停视频
+            });
+          </script>
+        </div>
         <div class="video-overlay"></div>
         <!-- 遮罩层 -->
 
@@ -28,13 +85,14 @@
           src="../../assets/video/show-reel-cut.mov"
           autoplay
           muted
+          playsinline
           loop
-          id="showreel"
+          id="video-preview"
         ></video>
       </div>
       <div class="caption">由我制作的产品宣传视频</div>
-      <p style="margin-top: 16px; margin-bottom: 32px;">
-        我在轻流担任高级体验设计师。在这样一家创业公司里工作充满了乐趣与挑战，我的工作内容几乎涵盖了设计的方方面，包括定性研究，原型设计，界面设计，可用性测试，体验度量与设计项目管理等，甚至还包括了公司品牌价值观的探索。我喜欢设计帮助人们完成工作的工具，这给我带来了极大的满足感。
+      <p style="margin-top: 16px; margin-bottom: 32px">
+        我在轻流担任高级体验设计师。在这样一家创业公司里工作充满了乐趣与挑战，我的工作内容几乎涵盖了设计的方方面，包括定性研究，原型设计，界面设计，可用性测试，体验度量与设计项目管理，还包括了公司品牌价值观的探索等。多元的工作内容让这份充满了挑战和乐趣，我想在这里分享一些这段经历中的重要时刻。
       </p>
     </div>
   </body>
