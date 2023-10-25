@@ -150,11 +150,45 @@ h1 {
   line-height: normal;
 }
 
+h2 {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 4px;
+}
+
+h3 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  /* margin-top: 32px; */
+  margin-bottom: 8px;
+}
+
+h4 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+  margin-bottom: 4px;
+}
+
 .subtitle {
   color: var(--gray-30);
   font-size: 24px;
   font-weight: 400;
   line-height: normal;
+}
+
+.subtitle_small {
+  color: var(--gray-30);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 4px;
 }
 
 p {
@@ -166,6 +200,10 @@ p {
   margin-bottom: 16px;
 }
 
+.highlight {
+  font-weight: 600;
+}
+
 .caption {
   font-size: 14px;
   color: var(--gray-30);
@@ -174,6 +212,9 @@ p {
   margin-top: 8px;
 }
 
+.people {
+  color: var(--gray-30);
+}
 /* Header Style */
 .header {
   display: flex;
@@ -184,6 +225,7 @@ p {
   background-color: rgb(255, 255, 255);
   height: 68px;
   width: 100%;
+  z-index: 99;
 }
 
 .header-content {
@@ -228,7 +270,7 @@ p {
 /* Main content style */
 .main-content {
   max-width: 680px;
-  margin: 108px auto 0 auto;
+  margin: 108px auto 80px auto;
   padding: 0 32px;
 }
 
@@ -261,13 +303,29 @@ p {
   z-index: 1;
 }
 
-#video-preview {
+#video-preview,
+#portal-video {
   /* position: absolute; */
   width: 100%;
   height: auto;
   display: block;
   border-radius: 8px;
   z-index: 0;
+}
+
+/* 插入的图片与视频样式 */
+img,
+.video {
+  max-width: 100%; /* 图像的最大宽度为父元素的宽度*/
+  height: auto; /* 高度自适应，以保持图像比例 */
+  border-radius: 8px;
+  border: var(--gray-05) 1px solid;
+}
+
+#portal-video {
+  border: var(--gray-05) 1px solid;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 /* 视频播放弹窗样式 */

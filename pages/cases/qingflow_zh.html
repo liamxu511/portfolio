@@ -90,10 +90,325 @@
           id="video-preview"
         ></video>
       </div>
-      <div class="caption">由我制作的产品宣传视频</div>
-      <p style="margin-top: 16px; margin-bottom: 32px">
+      <div class="caption">由我制作的产品宣传视频（2021）</div>
+      <p style="margin-top: 16px; margin-bottom: 40px">
         我在轻流担任高级体验设计师。我的工作内容几乎涵盖了设计的方方面，包括定性研究，原型设计，界面设计，可用性测试，体验度量与设计项目管理，还包括了公司品牌价值观的探索等。在创业公司的多元工作内容充满了挑战和乐趣，我想在这里分享一些这段经历中的重要时刻。
       </p>
+      <!--
+         门户引擎介绍分割线
+       -->
+      <h2>门户引擎</h2>
+      <p class="subtitle">从 0 到 1，打造驱动业务的全新功能引擎</p>
+
+      <video
+        src="../../assets/video/portal-video.mp4"
+        autoplay
+        muted
+        playsinline
+        loop
+        id="portal-video"
+      ></video>
+
+      <!--
+         段落分割线
+       -->
+      <p>
+        一个完整的业务系统，不仅要有完善的数据管理与流程管理，还需要考虑到如何让终端用户方便使用。「门户」便承担了这个定位如何满足各类信息整合场景，作为业务的统一入口，串联相关的业务流程。如何打造全新的「门户」功能，是我在轻流的第一个大项目挑战。
+      </p>
+      <div class="subtitle_small" style="margin-top: 40px">核心问题</div>
+      <h3>内部信息分发渠道杂乱，重点业务信息未能集中展示</h3>
+      <p>
+        随着客户对平台使用程度的加深，内部信息的有效聚合成为越来越多的客户提起的需求。对此，我们访谈了多位不同行业的客户，最终发现「业务的统一入口」是一个非常共性的需求。并且它的使用场景比我们预计的还要广泛，不仅可以在系统内部，也可以在系统外部给外部人员使用。
+      </p>
+      <!--
+         段落分割线
+       -->
+      <img
+        src="../../assets/img/qingflow/portal-research.png"
+        alt="portal-research"
+      />
+      <div class="caption">问题定义的调研结果（部分）</div>
+
+      <div class="subtitle_small" style="margin-top: 40px">设想</div>
+      <h3>一个页面串联所有</h3>
+      <p>
+        我们对「门户引擎」的设想，是通过无代码的方式，将应用、报表、待办等常用模块集成为一个门户页面，作为企业或个人处理业务的统一入口。它既可以作为业务系统的首页，也可以作为频繁访问的常用页面，也可以对外分发作为供外部人员使用的页面，并结合权限体系，实现「千人千面」的效果。
+      </p>
+      <!--
+         段落分割线
+       -->
+      <h3 style="margin-top: 40px">设计目标聚焦</h3>
+      <p>
+        以我们的设想为依据，我们提出了如下的设计目标：
+        <span class="highlight">操作简单，布局灵活，场景通用，千人千面</span>
+        为此我和团队进行了许多信息收集，用户访谈与竞品调研的工作。在竞品调研中，我并没有仅仅把目光放在直接竞品，而是选择了功能形态上更为相近的无代码建站工具，诸如
+        Wix, Strikingly, Webflow
+        等，这些工具给我提供了非常多的灵感。在实现目标的过程中，有一些挑战给我留下了比较深刻的印象。
+      </p>
+      <!--
+         段落分割线
+       -->
+      <div class="subtitle_small" style="margin-top: 40px">目标：场景通用</div>
+      <h3>挑战：抽象出最通用的搭建组件</h3>
+      <p>
+        为了能满足「场景通用」的设计目标，我们需要选择对于门户来说必不可少的页面元素，并把这些元素与其代表的功能抽象成搭建组件。在有限的资源下，我们能够实现的组件数量也是有限的，这就要求我们选择那些最必要的组件。通过调研与走访，我们最终选择了宫格组件，轮播组件，链接组件，报表组件，筛选组件与文本组件作为第一批实装的组件。
+      </p>
+      <!--
+         段落分割线
+       -->
+      <div class="subtitle_small" style="margin-top: 40px">目标：千人千面</div>
+      <h3>挑战：设计直观与复杂兼顾的界面布局</h3>
+      <p>
+        要想实现千人千面，门户的配置则必须要丰富，丰富则会带来一定的复杂性，而我们希望在功能的丰富同时，也保证界面的简洁与直观。我和设计师
+        <span class="people">@周凌超</span>
+        一起探索方案，最终得到了兼顾配置组件与主题样式与功能的门户配置布局。
+      </p>
+      <img
+        src="../../assets/img/qingflow/portal-layout-draft.png"
+        alt="portal-layout-draft"
+      />
+      <div class="caption" style="margin-bottom: 16px">
+        早期布局呈现，较为简陋
+      </div>
+      <img
+        src="../../assets/img/qingflow/portal-layout-final.png"
+        alt="portal-layout-final"
+      />
+      <div class="caption">最终演变的方案，包含了主题选择与功能配置等功能</div>
+      <!--
+         段落分割线
+       -->
+      <div class="subtitle_small" style="margin-top: 40px">目标：布局灵活</div>
+      <h3>挑战：制定兼顾普适与灵活的栅格系统</h3>
+      <p>
+        我们允许用户自由调整组件的位置与大小，而浏览器的视窗大小也可以被自由调整，这就意味着门户的组件会在各种尺寸下呈现，我必须考虑到每一种复杂布局下的组件显示效果，为此，我需要制定一个兼顾普适与灵活的栅格系统，以满足各个组件在不同的尺寸下的显示效果。
+      </p>
+      <img src="../../assets/img/qingflow/portal-grid.png" alt="portal-grid" />
+      <div class="caption" style="margin-bottom: 16px">
+        制定门户的栅格系统规范
+      </div>
+      <img
+        src="../../assets/img/qingflow/portal-mobile.png"
+        alt="portal-layout-mobile"
+      />
+      <div class="caption" style="margin-bottom: 40px">
+        同时兼顾移动端的展示，带来了工作量成倍的增长
+      </div>
+      <p>
+        其中，宫格组件与待办组件这类形态多变的组件尤其复杂，需要考虑在不同的尺寸下的显示效果。我和设计师
+        <span class="people">@周凌超</span>
+        为此定下了详细的适配规则，保证组件在各种宽度下都有合理的显示效果。
+      </p>
+      <video
+        src="../../assets/img/qingflow/portal-app.mov"
+        class="video"
+        autoplay
+        muted
+        playsinline
+        loop
+      ></video>
+      <div class="caption" style="margin-bottom: 16px">宫格组件的适配</div>
+      <video
+        src="../../assets/img/qingflow/portal-todo.mov"
+        class="video"
+        autoplay
+        muted
+        playsinline
+        loop
+      ></video>
+      <div class="caption">待办组件的适配</div>
+      <!--
+         段落分割线
+       -->
+      <div class="subtitle_small" style="margin-top: 40px">上线</div>
+      <h3>被用户的创造力惊叹</h3>
+      <p>
+        功能上线至今，「门户」已成为使用率名列前茅的重要板块，也是产品的重要卖点。我们也常常被客户使用门户搭建的一些优秀案例而惊叹。
+      </p>
+      <img
+        src="../../assets/img/qingflow/portal-case-1.png"
+        alt="portal-case-1"
+        style="margin-bottom: 8px"
+      />
+
+      <img
+        src="../../assets/img/qingflow/portal-case-2.png"
+        alt="portal-case-2"
+        style="margin-bottom: 8px"
+      />
+      <img
+        src="../../assets/img/qingflow/portal-case-3.webp"
+        alt="portal-case-3"
+      />
+      <div class="caption" style="margin-bottom: 40px">客户的使用案例</div>
+      <p style="margin-bottom: 40px">
+        不论是从使用率还是从用户的搭建结果来看，「门户引擎」基本满足了我们最初的设想：<span
+          class="highlight"
+          >一个页面，串联所有。</span
+        >
+      </p>
+      <!--
+         轻流4.0 介绍分割线
+       -->
+      <h2>轻流 4.0 改版</h2>
+      <p class="subtitle">灵活，效率与美观</p>
+
+      <video
+        src="../../assets/img/qingflow/4.0-WorkOS.mp4"
+        autoplay
+        muted
+        playsinline
+        loop
+        class="video workOS"
+        style="margin-bottom: 16px"
+      ></video>
+
+      <p>
+        为了成为一款「人人想用、可用、会用、在用」的无代码标杆产品，我们一直在向产品规划蓝图里添加实用、新颖、便捷且美观的新功能。作为一款成熟的无代码产品，轻流当下的产品设计虽然久经考验，但却已经无法面向未来。我作为轻流4.0大改版的主设计师，参与定义了轻流的下一个阶段的设计形态。
+      </p>
+      <!--
+         段落分割线
+       -->
+      <h3 style="margin-top: 40px">为什么需要改变</h3>
+      <p>
+        轻流积攒了不少来自业务侧和用户的真实反馈，需要一个契机将这些积攒的问题一并进行优化。经过与一系列的内部商讨与用户研究，结合产品愿景和用户愿景，我们概括出如下三个改版方向：
+      </p>
+      <p>
+        <span class="highlight">1.更合理的空间布局</span
+        ><br />旧版界面有界面空间浪费的问题，影响了信息呈现的效率。
+      </p>
+      <p>
+        <span class="highlight">2.数据功能升级</span><br />
+        作为一款aPaaS产品，轻流十分重视产品的灵活性，其中就包括数据功能的灵活展示与使用。在未来规划中，我们想要赋予用户一定的数据展示界面自定义能力。
+      </p>
+
+      <p>
+        <span class="highlight">3.交互与视觉优化</span><br />
+        在产品的早期设计过程中，并没有对诸如交互模式、视觉风格、icon规范等做全局考量，导致当下产品在交互和视觉上缺乏一致性。
+      </p>
+
+      <p>
+        我尝试用三个词概括本次的改版目标：<span class="highlight"
+          >「灵活」、「效率」、「美观」</span
+        ><br />在改版的过程中，我会时刻思考每一个设计决策是否契合关键词。
+      </p>
+      <!--
+         段落分割线
+       -->
+      <div class="subtitle_small" style="margin-top: 40px">
+        更合理的空间布局
+      </div>
+      <h3>从最高频使用的功能入手：主导航</h3>
+      <p>
+        我们决定从被用户频繁使用的界面入手，对高频使用的界面进行改动虽然激进，但可以收获最大的改版效果。对轻流这款较为复杂的产品来说，在不同的界面中频繁跳转是用户的日常。而主导航作为产品的「主要路标」，它对于帮助用户便捷使用产品的重要性再多强调也不为过。
+      </p>
+      <p>
+        我从「灵活」、「效率」、「美观」这三个改版视角，重新审视了我们当下的导航系统。<br />
+      </p>
+      <p>
+        <span class="highlight">灵活：</span
+        >我们一直在探索如何最大限度提升轻流的灵活性。在我们的产品规划中，我们希望将设计主导航内容的权利交给用户，而我们当下的导航方案并没有留下可拓展的自定义空间。<br />
+      </p>
+      <p>
+        <span class="highlight">效率：</span
+        >当下的导航设计在操作效率和信息展示效率上都不尽人如意。不同的导航内容被分散在不同的位置上，这给操作带来了不便，也不利于用户直观理解页面的布局安排。顶部导航占用位置也过大，挤占了纵向空间，让信息展示效率打了折扣。<br />
+      </p>
+      <p style="margin-bottom: 40px">
+        <span class="highlight">美观：</span
+        >虽然轻流是一款B端产品，但我们对视觉体验十分重视。导航的陈旧设计，不规范的
+        Icon 使用等等，都是亟待解决的视觉问题。
+      </p>
+      <h4>方案探索</h4>
+      <p>
+        在方案设计阶段，在确定大方向的前提下，我尝试了多种小方向，并持续进行用户访谈，对我们的探索方向给予修正。
+      </p>
+      <p>
+        以主导航的改版为例，在决定把所有导航类目集中在左侧后，我就打开应用包列表展开了多个方向的探索，产出了多种设计方案，其中不乏较为挑战用户习惯的尝试。因为此次界面的布局改动较大，影响的范围较广，我们每一个设计决策都十分谨慎。为了保证我们的方案是可以满足真实用户需求的，我们特地为每一个方向的尝试都做了高保真原型，产品经理与设计师们一起合作开展了可用性测试，用户访谈，问卷等多种调研手段。
+      </p>
+      <img
+        src="../../assets/img/qingflow/4.0-test-cover.png"
+        alt="User test screenshot"
+      />
+      <p class="caption">原型测试邀请</p>
+      <p>
+        我们与多位用户进行一对一的原型测试，将每一个方案都交由用户自己操作，我们通过观察和简单的提问，确认界面上的信息是否准确无误传达给用户，用户是否遇到操作上的障碍等等。
+      </p>
+      <img
+        src="../../assets/img/qingflow/4.0-test-iteration.png"
+        alt="Design iteration"
+      />
+      <p class="caption">方案尝试与探索（部分）</p>
+      <img
+        src="../../assets/img/qingflow/4.0-prototype.png"
+        alt="Design prototype"
+      />
+      <p class="caption">早期的交互原型之一，我们使用它和真实的用户进行交流</p>
+      <img
+        src="../../assets/img/qingflow/4.0-research-result.png"
+        alt="Design research"
+      />
+      <p class="caption">调研结果记录（部分）</p>
+      <img
+        src="../../assets/img/qingflow/4.0-research-doc.png"
+        alt="Design research doc"
+      />
+      <p class="caption">调研结果记录（部分）</p>
+      <h4 style="margin-top: 40px">最终呈现</h4>
+      <p>
+        <span class="highlight">更直观，更高效</span><br />
+        新版导航栏新增了全局导航属性，常驻在左侧，我们还特地为高频的应用包切换操作增添了快捷操作，提供了更加专注且高效的办公体验。
+      </p>
+      <p>
+        <span class="highlight">更优的屏效</span><br />
+        在原先的界面布局中，侧边导航与应用列表都占了较大的显示面积。此次改版中，我们将所有导航内容都聚集在左侧，省下了原先的顶部空间。此外我们还特别设计了展开和收起两种状态，用户可以根据自己的需要灵活选择。
+      </p>
+      <p>
+        <span class="highlight">更美观</span><br />
+        我们为每一个导航类目重绘了图标，调整了间距节奏，达成了视觉上的美观与和谐。
+      </p>
+      <img src="../../assets/img/qingflow/4.0-new-nav.png" alt="" />
+      <p class="caption">新版主导航</p>
+      <img src="../../assets/img/qingflow/4.0-nav-customize.png" alt="" />
+      <p class="caption">
+        我们设计了主导航自定义功能，用户可自由定义呈现的内容多少
+      </p>
+      <h4 style="margin-top: 40px">方案上线</h4>
+      <p>
+        B端产品一向求「稳」，改变用户的习惯是一件冒险之举。因此，在全新的主导航上线后，我们依然提供了旧版导航的入口，这样做的好处主要有两点：
+      </p>
+      <p>
+        <span class="highlight">1.平滑迁移</span><br />
+        为用户预留充足的适应时间，不冒然向用户推出一个全新的陌生界面，同时也为我们提供了一个打磨方案的窗口期。
+      </p>
+      <p>
+        <span class="highlight">2.数据验证</span><br />
+        新旧版本并存，实际上是给予了用户「用脚投票」的机会。从用户的选择之中，我们就可以知晓本次的改版是否成功。
+      </p>
+      <p>
+        令我们欣喜的是，在新的界面上线后，绝大部分用户最终都选择了新的界面。随着时间的推移，我们已经完全下线了旧版设计，用户已经<span
+          class="highlight"
+          >完全接受</span
+        >我们的新方案了。
+      </p>
+      <!--
+         段落分割线
+       -->
+      <div class="subtitle_small" style="margin-top: 40px">
+        更合理的空间布局
+      </div>
+      <h3>优化信息展示效率</h3>
+      <p>
+        在原先的界面中，有一些信息展示效率的问题被人诟病，我们需要思考是否有更加合理的布局呈现方式。在设计改版过程中，我们持续有多位用户进行访谈，了解他们对页面布局的看法。优化后的界面布局让数据的有效显示区域有了显著的提升。
+      </p>
+      <video
+        src="../../assets/img/qingflow/4.0-layout.mp4"
+        autoplay
+        muted
+        playsinline
+        loop
+        class="video"
+      ></video>
+      <div class="caption">新旧版的布局对比，效果显著</div>
     </div>
   </body>
 </html>
