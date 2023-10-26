@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" href="case.css" />
+    <title>为轻流设计</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-content">
+        <div class="back" id="goBackButton">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M13.4779 3.29289C13.0874 2.90237 12.4542 2.90237 12.0637 3.29289L4.04289 11.3137C3.65237 11.7043 3.65237 12.3374 4.04289 12.7279L12.0637 20.7488C12.4542 21.1393 13.0874 21.1393 13.4779 20.7488C13.8685 20.3583 13.8685 19.7251 13.4779 19.3346L7.16421 13.0208H19.1875C19.7398 13.0208 20.1875 12.5731 20.1875 12.0208C20.1875 11.4686 19.7398 11.0208 19.1875 11.0208H7.16421L13.4779 4.70711C13.8685 4.31658 13.8685 3.68342 13.4779 3.29289Z"
+              fill="#B9BDCF"
+            />
+          </svg>
+        </div>
+        <div class="language-switch">English</div>
+        <script>
+          // 获取返回按钮元素
+          var goBackButton = document.getElementById("goBackButton");
+
+          // 添加点击事件监听器
+          goBackButton.addEventListener("click", function () {
+            // 使用 history 对象返回上一页
+            window.history.back();
+          });
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

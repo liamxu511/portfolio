@@ -212,6 +212,30 @@ p {
   margin-top: 4px;
 }
 
+/* 章节分割线的样式 */
+.chapter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.chapter .text {
+  white-space: nowrap;
+  /* background-color: var(--gray-05); */
+  color: var(--gray-20);
+  /* padding: 8px;
+  border-radius: 8px; */
+}
+
+.divider {
+  background-color: var(--gray-10);
+  height: 1px;
+  width: 100%;
+}
+
 .people {
   color: var(--gray-30);
 }
