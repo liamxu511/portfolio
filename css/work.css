@@ -212,7 +212,7 @@ nav ul {
   border-radius: 8px;
   border: 1px solid var(--gray-05);
   position: relative;
-  background-color: azure;
+  background-color: #f9fafc;
   z-index: -2;
 }
 
