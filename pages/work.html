@@ -38,7 +38,7 @@
       </div> -->
       <div id="showreel">
         <!-- <div class="mask"></div> -->
-        <button class="button button__primary">showreel</button>
+        <button class="button button__primary" id="play-button">showreel</button>
         <video
           src="../assets/video/showreel_2023_preview.mp4"
           autoplay
@@ -47,6 +47,70 @@
           id="showreel_video"
         ></video>
       </div>
+        <!-- 点击播放按钮弹出弹窗 -->
+        <div id="video-popup" style="display: none">
+          <div id="video-close">
+            <?xml version="1.0" encoding="UTF-8"?><svg
+              width="32"
+              height="32"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z"
+                fill="none"
+                stroke="#ffffff"
+                stroke-width="4"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M29.6567 18.3432L18.343 29.6569"
+                stroke="#ffffff"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M18.3433 18.3432L29.657 29.6569"
+                stroke="#ffffff"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <video id="video-player" controls>
+            <source
+              src="../assets/video/showreel_2023.mp4"
+              type="video/mp4"
+            />
+            <!-- 添加其他视频格式的<source>标签，以提供兼容性 -->
+          </video>
+          <script>
+            const playButton = document.getElementById("play-button");
+            const videoPopup = document.getElementById("video-popup");
+            const videoPlayer = document.getElementById("video-player");
+            const videoClose = document.getElementById("video-close");
+
+            playButton.addEventListener("click", function () {
+              videoPopup.style.display = "flex"; // 显示视频弹出框
+              videoPlayer.play(); // 播放视频
+            });
+
+            // 当用户关闭视频弹出框时，停止视频播放
+            // video.addEventListener("click", function () {
+            //   videoPopup.style.display = "none"; // 隐藏视频弹出框
+            //   videoPlayer.pause(); // 暂停视频
+            // });
+
+            // 当用户点击关闭时，停止视频播放，关闭蒙层
+            videoClose.addEventListener("click", function () {
+              videoPopup.style.display = "none"; // 隐藏视频弹出框
+              videoPlayer.pause(); // 暂停视频
+            });
+          </script>
+        </div>
       <div id="projects_list">
         <a
           class="project_card"

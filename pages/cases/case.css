@@ -377,4 +377,12 @@ img,
   align-items: center;
 }
 
+#video-close {
+  /* background-color: aqua; */
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  cursor: pointer;
+}
+
 /* 样式可根据需要进行自定义 */

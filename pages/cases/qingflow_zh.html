@@ -29,7 +29,6 @@
           </svg>
         </a>
         <!-- <div class="language-switch">English</div> -->
-        
       </div>
     </div>
     <div class="main-content">
@@ -45,6 +44,37 @@
         <button class="button button__primary" id="play-button">播放</button>
         <!-- 点击播放按钮弹出弹窗 -->
         <div id="video-popup" style="display: none">
+          <div id="video-close">
+            <?xml version="1.0" encoding="UTF-8"?><svg
+              width="32"
+              height="32"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z"
+                fill="none"
+                stroke="#ffffff"
+                stroke-width="4"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M29.6567 18.3432L18.343 29.6569"
+                stroke="#ffffff"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M18.3433 18.3432L29.657 29.6569"
+                stroke="#ffffff"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
           <video id="video-player" controls>
             <source
               src="../../assets/video/product-video.mp4"
@@ -56,6 +86,7 @@
             const playButton = document.getElementById("play-button");
             const videoPopup = document.getElementById("video-popup");
             const videoPlayer = document.getElementById("video-player");
+            const videoClose = document.getElementById("video-close");
 
             playButton.addEventListener("click", function () {
               videoPopup.style.display = "flex"; // 显示视频弹出框
@@ -63,8 +94,14 @@
             });
 
             // 当用户关闭视频弹出框时，停止视频播放
-            videoPopup.addEventListener("click", function () {
-              // videoPopup.style.display = "none"; // 隐藏视频弹出框
+            // video.addEventListener("click", function () {
+            //   videoPopup.style.display = "none"; // 隐藏视频弹出框
+            //   videoPlayer.pause(); // 暂停视频
+            // });
+
+            // 当用户点击关闭时，停止视频播放，关闭蒙层
+            videoClose.addEventListener("click", function () {
+              videoPopup.style.display = "none"; // 隐藏视频弹出框
               videoPlayer.pause(); // 暂停视频
             });
           </script>
@@ -289,7 +326,8 @@
 
       <p>
         <span class="highlight">3.交互与视觉优化</span><br />
-        在产品的早期设计过程中，并没有对诸如交互模式、视觉风格、Icon 规范等做全局考量，导致当下产品在交互和视觉上缺乏一致性。
+        在产品的早期设计过程中，并没有对诸如交互模式、视觉风格、Icon
+        规范等做全局考量，导致当下产品在交互和视觉上缺乏一致性。
       </p>
 
       <p>
