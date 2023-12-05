@@ -506,8 +506,8 @@ nav ul {
   }
 
   #landing_motion {
-    width: calc(100vw - 16px); /* 视窗宽度减去 16px */
-    /* max-width: 500px; */
+    width: calc(100vw - 16px);
+    /* background-color: aquamarine; */
     height: auto;
   }
 }
