@@ -474,7 +474,7 @@ nav ul {
     justify-content: start;
     height: 100vh;
     gap: 0px;
-    padding: 52px 40px 0 40px;
+    /* padding: 52px 0px 0 0px; */
     /* background-color: antiquewhite; */
   }
 
