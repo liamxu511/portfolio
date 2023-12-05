@@ -471,7 +471,7 @@ nav ul {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     height: 100vh;
     gap: 0px;
     /* padding: 52px 0px 0 0px; */
