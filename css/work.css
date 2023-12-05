@@ -194,6 +194,14 @@ nav ul {
 #showreel {
   position: relative;
 }
+.button__primary {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 2;
+}
 
 #showreel_video {
   display: flex;
@@ -208,14 +216,14 @@ nav ul {
   z-index: -2;
 }
 
-#showreel .mask {
+/* #showreel .mask {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #01000b98;
+  background-color: rgba(1, 0, 10, 0.596);
   border-radius: 8px;
   z-index: -1;
-}
+} */
 
 /* 
 
@@ -231,7 +239,7 @@ nav ul {
   align-items: center;
   align-content: center;
   justify-content: center;
-  padding: 0 32px;
+  /* padding: 0 32px; */
   gap: 16px;
   /* align-self: stretch; */
   flex-wrap: wrap;
