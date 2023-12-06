@@ -509,7 +509,7 @@ nav ul {
 
   #landing_motion {
     width: calc(100vw - 16px);
-    background-color: aquamarine; 
+    /* background-color: aquamarine;  */
     height: calc(100vw - 16px);
   }
 }
