@@ -134,11 +134,13 @@ table {
 
 /* Setting Inter font and color */
 :root {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", PingFang SC, Hiragino Sans GB, Microsoft YaHei UI,
+    Microsoft YaHei, Source Han Sans CN, sans-serif;
 }
 @supports (font-variation-settings: normal) {
   :root {
-    font-family: "Inter var", sans-serif;
+    font-family: "Inter var", PingFang SC, Hiragino Sans GB, Microsoft YaHei UI,
+      Microsoft YaHei, Source Han Sans CN, sans-serif;
   }
 }
 :root {
@@ -507,7 +509,7 @@ nav ul {
 
   #landing_motion {
     width: calc(100vw - 16px);
-    /* background-color: aquamarine; */
-    height: auto;
+    background-color: aquamarine; 
+    height: auto; 
   }
 }

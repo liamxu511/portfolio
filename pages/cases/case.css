@@ -136,8 +136,8 @@ table {
 }
 
 /* Setting font style */
-[lang^="zh"] body {
-  font-family:/*中文*/ PingFang SC, Hiragino Sans GB, Microsoft YaHei UI,
+body {
+  font-family: "Inter", PingFang SC, Hiragino Sans GB, Microsoft YaHei UI,
     Microsoft YaHei, Source Han Sans CN, sans-serif;
   color: var(--font-color);
 }
