@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <link rel="stylesheet" href="case.css" />
+    <script defer src="toc.js"></script>
+
     <title>拯救心脏</title>
   </head>
   <body>
@@ -31,167 +33,210 @@
         <!-- <div class="language-switch">English</div> -->
       </div>
     </div>
-    <div class="main-content">
-      <div class="title">
-        <h1>拯救心脏</h1>
-        <p class="subtitle">智能软硬件结合的概念设计，挽救心脏骤停</p>
-      </div>
-      <p>
-        医院外心脏骤停（OHCA）每年夺走数百万的生命，而心脏复苏术（CPR）是提高
-        OHCA 生存率的重要手段。
-      </p>
+    <div class="main">
+      <div class="side">
+        <div id="toc">
+          <p class="toc-title">目录</p>
 
-      <p>本项目以「提高 OHCA 生存率」为目标，设计了一套概念方案。</p>
-      <img
-        style="margin-bottom: 40px"
-        src="../../assets/img/cpr/cover.jpg"
-        alt="aed-cover"
-      />
-      <h3 style="margin-bottom: 16px">调研与分析</h3>
-      <h4>绘制 Journey Map</h4>
-      <p>
-        前期调研中，我们阅读了大量文献，电话访谈了医务人员，同时比较分析了九个医院外心脏骤停的案例异同，我们利用我们得到的信息绘制了一份
-        Journey Map，帮助我们了解场景。
-      </p>
-      <img
-        style="margin-bottom: 40px"
-        src="../../assets/img/cpr/cpr_ujm.png"
-        alt=""
-      />
-      <h4>卡片分类游戏</h4>
-      <p>我们设计了卡片分类游戏对受访者进行急救水平测试。</p>
-      <img src="../../assets/img/cpr/card_test.png" alt="" />
-      <div style="margin-bottom: 40px" class="caption">街头访谈</div>
-      <h4>线索串联</h4>
-      <p>
-        我们将收集到的信息进行分类与串联，确保我们的每一个调研结论都有证据支撑。
-      </p>
-      <img src="../../assets/img/cpr/evidence_wall.png" alt="" />
-      <div style="margin-bottom: 40px" class="caption">线索墙</div>
-      <h3 style="margin-bottom: 16px">定义痛点</h3>
+          <a
+            onclick="event.preventDefault(); scrollToWithOffset('research', 108)"
+            href="#research"
+            class="toc-item"
+            >调研与分析🔍</a
+          >
+          <a
+            href="#define"
+            class="toc-item"
+            onclick="event.preventDefault(); scrollToWithOffset('define', 108)"
+            >定义痛点🎯</a
+          >
+          <a
+            href="#concept"
+            class="toc-item"
+            onclick="event.preventDefault(); scrollToWithOffset('concept', 108)"
+            >概念构思💡</a
+          >
+          <a
+            href="#outcome"
+            class="toc-item"
+            onclick="event.preventDefault(); scrollToWithOffset('outcome', 108)"
+            >最终产出✨</a
+          >
+        </div>
+      </div>
+      <div class="main-content">
+        <section class="toc" id="research">
+          <div class="title">
+            <h1>拯救心脏</h1>
+            <p class="subtitle">智能软硬件结合的概念设计，挽救心脏骤停</p>
+          </div>
+          <p>
+            医院外心脏骤停（OHCA）每年夺走数百万的生命，而心脏复苏术（CPR）是提高
+            OHCA 生存率的重要手段。
+          </p>
 
-      <h4>关键洞察</h4>
-      <p>
-        1. 在任何情况下都需要第一时间拨打急救电话，这十分重要<br />
-        2. 救援行动需要围观者进行基本的团队协作与多人配合<br />
-        3. 自动体外除颤仪（AED）有时可以发挥重要作用
-      </p>
-      <h4>关键痛点</h4>
-      <p>
-        1. 接线员仅通过语音通话很难快速协调群众进行一场急救行动<br />
-        2. 熟悉心脏复苏的人非常乐意帮忙，但他们不是每次都恰巧在现场<br />
-        3. 大家普遍缺乏急救的协作意识<br />
-        4. 少有人了解公共场所 AED 放置在何处
-      </p>
-      <p>
-        这些痛点可归纳为以下两个方面：<br />
-        1.如何有效组织一场急救协作？<br />
-        2.如何充分利用社区中已有的资源？
-      </p>
-      <p>由此，得出我们的设计方向：</p>
-      <h4 style="margin-bottom: 40px">
-        我们如何连接每个社区内已有的资源，使得社区内的急救合作更顺畅，充分释放社区的救援能力？
-      </h4>
-      <h3 style="margin-bottom: 16px">概念构思</h3>
-      <h4>寻找可能的机会触点</h4>
-      <p>
-        我们重新审视了UJM，并定位出关键触点，思考如何利用这些触点帮助我们达成设计目标。
-      </p>
-      <img src="../../assets/img/cpr/cpr_ujm_key.png" alt="" />
-      <div style="margin-bottom: 40px" class="caption">定位到的关键触点</div>
-      <h4>进行专家访谈</h4>
-      <p>
-        我们与专业救援队的人士进行了访谈，了解他们的工作模式，与他们分享了我们的研究成果，并让他们从专业的视角给我的设计方向提出建议。
-      </p>
-      <h4>我们的方案</h4>
-      <p>我们的方案重点在于通过 App 与智能 AED，连接社区的救援资源。</p>
-      <p>
-        愿意为急救出力的人们可以下载 App
-        成为志愿者。当意外发生时，急救中心接线员可以激活救援信号，此时手机 App
-        便会收到提醒并会依据志愿者所在的位置分配救援任务。
-      </p>
-      <p>
-        AED 也会被接入救援网络，急救中心接线员激活的信号会让一定范围内的 AED
-        发出声音警报，以此吸引周围人群的注意力，最大限度争取到更多的人参与到救援中。
-      </p>
-      <img src="../../assets/img/cpr/storyboard.png" alt="" />
-      <div style="margin-bottom: 40px" class="caption">故事板</div>
-      <h3 style="margin-bottom: 16px">最终产出</h3>
-      <h4>App Design</h4>
-      <img src="../../assets/img/cpr/cpr_mobile.png" alt="" />
-      <div style="margin-bottom: 40px" class="caption">App 关键页面</div>
-      <div class="subtitle_small" style="font-size: 16px">Flow 1</div>
-      <h4>常态</h4>
+          <p>本项目以「提高 OHCA 生存率」为目标，设计了一套概念方案。</p>
+          <img
+            style="margin-bottom: 40px"
+            src="../../assets/img/cpr/cover.jpg"
+            alt="aed-cover"
+          />
 
-      <p>
-        没有紧急事件发生的形态。此时 App
-        承载的主要功能为信息科普，主要目的为提高用户的救援 知识。
-      </p>
-      <img src="../../assets/img/cpr/cpr_mobile_flow1_a.png" alt="" />
-      <div style="margin-bottom: 16px" class="caption">
-        常态页面时，默认展示 AED 地图
-      </div>
-      <p>通过勋章，成就等系统，激励志愿者学习更多急救知识</p>
-      <img src="../../assets/img/cpr/cpr_mobile_badge.png" alt="" />
-      <div style="margin-bottom: 16px" class="caption">
-        个人页面展示勋章与课程学习进度
-      </div>
-      <div class="subtitle_small" style="font-size: 16px">Flow 2</div>
-      <h4>紧急态</h4>
-      <p>
-        急救中心激活救援信号后的状态。在此状态下，除救援外的功能都会消失。根据志愿者所处的位置，救援阶段的不同，反馈不同的救援任务。
-      </p>
-      <img src="../../assets/img/cpr/cpr_mobile_emergency.png" alt="" />
-      <div style="margin-bottom: 16px" class="caption">
-        紧急状态时的页面状态
-      </div>
-      <p>
-        通过任务卡片的方式将救援流程拆解，依照卡片的指引志愿者可以无障碍完成任务
-      </p>
-      <img src="../../assets/img/cpr/cpr_mobile_step.png" alt="" />
-      <div style="margin-bottom: 40px" class="caption">
-        紧急状态时的任务指引
-      </div>
-      <h4>智能 AED</h4>
-      <img
-        style="margin-bottom: 16px"
-        src="../../assets/img/cpr/aed.png"
-        alt=""
-      />
-      <p>
-        1.带有引导界面的 AED 盒子<br />
-        2.AED 盒子的底座，由急救中心远程解锁。激活后会发出声响引人注意
-      </p>
-      <h4>激活</h4>
-      <p>
-        急救中心发出救援信号后，AED 进入激活状态。此时的 AED
-        会发出警报声响，同时显示屏上会显示事件发生的地点和救援指南。
-      </p>
-      <img src="../../assets/img/cpr/AED-Screen1.png" alt="" />
-      <div style="margin-bottom: 16px" class="caption">
-        激活后的警报界面。左侧展示必要的信息，右侧展示操作提示
-      </div>
-      <h4>携带</h4>
-      <p>
-        在被人取下后，AED的屏幕内容会自动切换至导航模式，指引携带者前往事发地。
-      </p>
-      <img src="../../assets/img/cpr/AED-Screen2.png" alt="" />
-      <div style="margin-bottom: 16px" class="caption">
-        AED 被取下后切换至导航界面
-      </div>
-      <video
-        src="../../assets/img/cpr/aed-seprate.mp4"
-        autoplay
-        muted
-        playsinline
-        loop
-        class="video"
-      ></video>
-      <div style="margin-bottom: 16px" class="caption">界面切换动画</div>
-      <div class="chapter">
-        <div class="divider"></div>
-        <div class="text">End</div>
-        <div class="divider"></div>
+          <h3 style="margin-bottom: 16px">调研与分析</h3>
+          <h4>绘制 Journey Map</h4>
+          <p>
+            前期调研中，我们阅读了大量文献，电话访谈了医务人员，同时比较分析了九个医院外心脏骤停的案例异同，我们利用我们得到的信息绘制了一份
+            Journey Map，帮助我们了解场景。
+          </p>
+          <img
+            style="margin-bottom: 40px"
+            src="../../assets/img/cpr/cpr_ujm.png"
+            alt=""
+          />
+          <h4>卡片分类游戏</h4>
+          <p>我们设计了卡片分类游戏对受访者进行急救水平测试。</p>
+          <img src="../../assets/img/cpr/card_test.png" alt="" />
+          <div style="margin-bottom: 40px" class="caption">街头访谈</div>
+          <h4>线索串联</h4>
+          <p>
+            我们将收集到的信息进行分类与串联，确保我们的每一个调研结论都有证据支撑。
+          </p>
+          <img src="../../assets/img/cpr/evidence_wall.png" alt="" />
+          <div style="margin-bottom: 40px" class="caption">线索墙</div>
+        </section>
+        <section class="toc" id="define">
+          <h3 style="margin-bottom: 16px">定义痛点</h3>
+
+          <h4>关键洞察</h4>
+          <p>
+            1. 在任何情况下都需要第一时间拨打急救电话，这十分重要<br />
+            2. 救援行动需要围观者进行基本的团队协作与多人配合<br />
+            3. 自动体外除颤仪（AED）有时可以发挥重要作用
+          </p>
+          <h4>关键痛点</h4>
+          <p>
+            1. 接线员仅通过语音通话很难快速协调群众进行一场急救行动<br />
+            2. 熟悉心脏复苏的人非常乐意帮忙，但他们不是每次都恰巧在现场<br />
+            3. 大家普遍缺乏急救的协作意识<br />
+            4. 少有人了解公共场所 AED 放置在何处
+          </p>
+          <p>
+            这些痛点可归纳为以下两个方面：<br />
+            1.如何有效组织一场急救协作？<br />
+            2.如何充分利用社区中已有的资源？
+          </p>
+          <p>由此，得出我们的设计方向：</p>
+          <h4 style="margin-bottom: 40px">
+            我们如何连接每个社区内已有的资源，使得社区内的急救合作更顺畅，充分释放社区的救援能力？
+          </h4>
+        </section>
+        <section class="toc" id="concept">
+          <h3 style="margin-bottom: 16px">概念构思</h3>
+          <h4>寻找可能的机会触点</h4>
+          <p>
+            我们重新审视了UJM，并定位出关键触点，思考如何利用这些触点帮助我们达成设计目标。
+          </p>
+          <img src="../../assets/img/cpr/cpr_ujm_key.png" alt="" />
+          <div style="margin-bottom: 40px" class="caption">
+            定位到的关键触点
+          </div>
+          <h4>进行专家访谈</h4>
+          <p>
+            我们与专业救援队的人士进行了访谈，了解他们的工作模式，与他们分享了我们的研究成果，并让他们从专业的视角给我的设计方向提出建议。
+          </p>
+          <h4>我们的方案</h4>
+          <p>我们的方案重点在于通过 App 与智能 AED，连接社区的救援资源。</p>
+          <p>
+            愿意为急救出力的人们可以下载 App
+            成为志愿者。当意外发生时，急救中心接线员可以激活救援信号，此时手机
+            App 便会收到提醒并会依据志愿者所在的位置分配救援任务。
+          </p>
+          <p>
+            AED 也会被接入救援网络，急救中心接线员激活的信号会让一定范围内的 AED
+            发出声音警报，以此吸引周围人群的注意力，最大限度争取到更多的人参与到救援中。
+          </p>
+          <img src="../../assets/img/cpr/storyboard.png" alt="" />
+          <div style="margin-bottom: 40px" class="caption">故事板</div>
+        </section>
+        <section class="toc" id="outcome">
+          <h3 style="margin-bottom: 16px">最终产出</h3>
+          <h4>App Design</h4>
+          <img src="../../assets/img/cpr/cpr_mobile.png" alt="" />
+          <div style="margin-bottom: 40px" class="caption">App 关键页面</div>
+          <div class="subtitle_small" style="font-size: 16px">Flow 1</div>
+          <h4>常态</h4>
+
+          <p>
+            没有紧急事件发生的形态。此时 App
+            承载的主要功能为信息科普，主要目的为提高用户的救援 知识。
+          </p>
+          <img src="../../assets/img/cpr/cpr_mobile_flow1_a.png" alt="" />
+          <div style="margin-bottom: 16px" class="caption">
+            常态页面时，默认展示 AED 地图
+          </div>
+          <p>通过勋章，成就等系统，激励志愿者学习更多急救知识</p>
+          <img src="../../assets/img/cpr/cpr_mobile_badge.png" alt="" />
+          <div style="margin-bottom: 16px" class="caption">
+            个人页面展示勋章与课程学习进度
+          </div>
+          <div class="subtitle_small" style="font-size: 16px">Flow 2</div>
+          <h4>紧急态</h4>
+          <p>
+            急救中心激活救援信号后的状态。在此状态下，除救援外的功能都会消失。根据志愿者所处的位置，救援阶段的不同，反馈不同的救援任务。
+          </p>
+          <img src="../../assets/img/cpr/cpr_mobile_emergency.png" alt="" />
+          <div style="margin-bottom: 16px" class="caption">
+            紧急状态时的页面状态
+          </div>
+          <p>
+            通过任务卡片的方式将救援流程拆解，依照卡片的指引志愿者可以无障碍完成任务
+          </p>
+          <img src="../../assets/img/cpr/cpr_mobile_step.png" alt="" />
+          <div style="margin-bottom: 40px" class="caption">
+            紧急状态时的任务指引
+          </div>
+          <h4>智能 AED</h4>
+          <img
+            style="margin-bottom: 16px"
+            src="../../assets/img/cpr/aed.png"
+            alt=""
+          />
+          <p>
+            1.带有引导界面的 AED 盒子<br />
+            2.AED 盒子的底座，由急救中心远程解锁。激活后会发出声响引人注意
+          </p>
+          <h4>激活</h4>
+          <p>
+            急救中心发出救援信号后，AED 进入激活状态。此时的 AED
+            会发出警报声响，同时显示屏上会显示事件发生的地点和救援指南。
+          </p>
+          <img src="../../assets/img/cpr/AED-Screen1.png" alt="" />
+          <div style="margin-bottom: 16px" class="caption">
+            激活后的警报界面。左侧展示必要的信息，右侧展示操作提示
+          </div>
+          <h4>携带</h4>
+          <p>
+            在被人取下后，AED的屏幕内容会自动切换至导航模式，指引携带者前往事发地。
+          </p>
+          <img src="../../assets/img/cpr/AED-Screen2.png" alt="" />
+          <div style="margin-bottom: 16px" class="caption">
+            AED 被取下后切换至导航界面
+          </div>
+          <video
+            src="../../assets/img/cpr/aed-seprate.mp4"
+            autoplay
+            muted
+            playsinline
+            loop
+            class="video"
+          ></video>
+          <div style="margin-bottom: 16px" class="caption">界面切换动画</div>
+        </section>
+        <div class="chapter">
+          <div class="divider"></div>
+          <div class="text">End</div>
+          <div class="divider"></div>
+        </div>
       </div>
     </div>
     <!-- Vercel Analytics -->

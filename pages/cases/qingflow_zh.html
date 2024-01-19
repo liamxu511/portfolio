@@ -7,8 +7,10 @@
     <link rel="preconnect" href="https://rsms.me/" />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <link rel="stylesheet" href="case.css" />
+    <script defer src="toc.js"></script>
     <title>轻流 4.0</title>
   </head>
+
   <body>
     <div class="header">
       <div class="header-content">
@@ -31,278 +33,354 @@
         <!-- <div class="language-switch">English</div> -->
       </div>
     </div>
-    <div class="main-content">
-      <div class="title">
-        <h1>轻流 4.0</h1>
-        <p class="subtitle">中国领先的无代码平台设计升级</p>
-      </div>
-
-      <p>
-        轻流是一个表单与流程驱动的无代码搭建平台，旨在帮助没有技术背景的业务人员轻松搭建业务系统。
-      </p>
-      <div class="test"></div>
-      <div id="promo-video">
-        <button class="button button__primary" id="play-button">
-          播放全片
-        </button>
-        <!-- 点击播放按钮弹出弹窗 -->
-        <div id="video-popup" style="display: none">
-          <div id="video-close">
-            <?xml version="1.0" encoding="UTF-8"?><svg
-              width="32"
-              height="32"
-              viewBox="0 0 48 48"
+    <div class="main">
+      <!-- <div class="header">
+        <div class="header-content">
+          <a class="back" id="goBackButton" href="../work.html">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z"
-                fill="none"
-                stroke="#ffffff"
-                stroke-width="4"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M29.6567 18.3432L18.343 29.6569"
-                stroke="#ffffff"
-                stroke-width="4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M18.3433 18.3432L29.657 29.6569"
-                stroke="#ffffff"
-                stroke-width="4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M13.4779 3.29289C13.0874 2.90237 12.4542 2.90237 12.0637 3.29289L4.04289 11.3137C3.65237 11.7043 3.65237 12.3374 4.04289 12.7279L12.0637 20.7488C12.4542 21.1393 13.0874 21.1393 13.4779 20.7488C13.8685 20.3583 13.8685 19.7251 13.4779 19.3346L7.16421 13.0208H19.1875C19.7398 13.0208 20.1875 12.5731 20.1875 12.0208C20.1875 11.4686 19.7398 11.0208 19.1875 11.0208H7.16421L13.4779 4.70711C13.8685 4.31658 13.8685 3.68342 13.4779 3.29289Z"
+                fill="#B9BDCF"
               />
             </svg>
-          </div>
-          <video id="video-player" controls>
-            <source
-              src="../../assets/video/product-video.mp4"
-              type="video/mp4"
-            />
-            <!-- 添加其他视频格式的<source>标签，以提供兼容性 -->
-          </video>
-          <script>
-            const playButton = document.getElementById("play-button");
-            const videoPopup = document.getElementById("video-popup");
-            const videoPlayer = document.getElementById("video-player");
-            const videoClose = document.getElementById("video-close");
-
-            playButton.addEventListener("click", function () {
-              videoPopup.style.display = "flex"; // 显示视频弹出框
-              videoPlayer.play(); // 播放视频
-            });
-
-            // 当用户关闭视频弹出框时，停止视频播放
-            // video.addEventListener("click", function () {
-            //   videoPopup.style.display = "none"; // 隐藏视频弹出框
-            //   videoPlayer.pause(); // 暂停视频
-            // });
-
-            // 当用户点击关闭时，停止视频播放，关闭蒙层
-            videoClose.addEventListener("click", function () {
-              videoPopup.style.display = "none"; // 隐藏视频弹出框
-              videoPlayer.pause(); // 暂停视频
-            });
-          </script>
+          </a>
         </div>
-        <div class="video-overlay"></div>
-        <!-- 遮罩层 -->
-
-        <video
-          src="../../assets/video/show-reel-cut.mp4"
-          autoplay
-          muted
-          playsinline
-          loop
-          id="video-preview"
-        ></video>
+      </div> -->
+      <div class="side">
+        <div id="toc">
+          <p class="toc-title">目录</p>
+          <a
+            onclick="event.preventDefault(); scrollToWithOffset('case-intro', 108)"
+            href="#case-intro"
+            class="toc-item"
+            >简介🎬</a
+          >
+          <a
+            href="#portal-engine"
+            class="toc-item"
+            onclick="event.preventDefault(); scrollToWithOffset('portal-engine', 108)"
+            >门户引擎</a
+          >
+          <a
+            href="#new-nav"
+            class="toc-item"
+            onclick="event.preventDefault(); scrollToWithOffset('new-nav', 108)"
+            >主导航改版</a
+          >
+          <a
+            href="#new-view"
+            class="toc-item"
+            onclick="event.preventDefault(); scrollToWithOffset('new-view', 108)"
+            >全新的视图功能</a
+          >
+          <a
+            href="#team-culture"
+            class="toc-item"
+            onclick="event.preventDefault(); scrollToWithOffset('team-culture', 108)"
+            >团队文化建设</a
+          >
+        </div>
       </div>
-      <div class="caption">由我制作的产品宣传视频（2021）</div>
-      <p style="margin-top: 16px; margin-bottom: 40px">
-        我在轻流担任高级体验设计师，工作内容几乎涵盖了设计的方方面，包括定性研究，原型设计，界面设计，可用性测试，体验度量与设计项目管理等。
-      </p>
-      <p style="margin-bottom: 40px">
-        我作为主设计师参与了轻流 4.0 的大升级，主要工作包括：
-      </p>
-      <!--
+
+      <div class="main-content">
+        <section class="toc" id="case-intro">
+          <div class="title">
+            <!-- <a class="anchor" id="case-intro"></a> -->
+            <h1>轻流 4.0</h1>
+            <p class="subtitle">中国领先的无代码平台设计升级</p>
+          </div>
+
+          <p>
+            轻流是一个表单与流程驱动的无代码搭建平台，旨在帮助没有技术背景的业务人员轻松搭建业务系统。
+          </p>
+          <div class="test"></div>
+          <div id="promo-video">
+            <button class="button button__primary" id="play-button">
+              播放全片
+            </button>
+            <!-- 点击播放按钮弹出弹窗 -->
+            <div id="video-popup" style="display: none">
+              <div id="video-close">
+                <?xml version="1.0" encoding="UTF-8"?><svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z"
+                    fill="none"
+                    stroke="#ffffff"
+                    stroke-width="4"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M29.6567 18.3432L18.343 29.6569"
+                    stroke="#ffffff"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M18.3433 18.3432L29.657 29.6569"
+                    stroke="#ffffff"
+                    stroke-width="4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <video id="video-player" controls>
+                <source
+                  src="../../assets/video/product-video.mp4"
+                  type="video/mp4"
+                />
+                <!-- 添加其他视频格式的<source>标签，以提供兼容性 -->
+              </video>
+              <script>
+                const playButton = document.getElementById("play-button");
+                const videoPopup = document.getElementById("video-popup");
+                const videoPlayer = document.getElementById("video-player");
+                const videoClose = document.getElementById("video-close");
+
+                playButton.addEventListener("click", function () {
+                  videoPopup.style.display = "flex"; // 显示视频弹出框
+                  videoPlayer.play(); // 播放视频
+                });
+
+                // 当用户关闭视频弹出框时，停止视频播放
+                // video.addEventListener("click", function () {
+                //   videoPopup.style.display = "none"; // 隐藏视频弹出框
+                //   videoPlayer.pause(); // 暂停视频
+                // });
+
+                // 当用户点击关闭时，停止视频播放，关闭蒙层
+                videoClose.addEventListener("click", function () {
+                  videoPopup.style.display = "none"; // 隐藏视频弹出框
+                  videoPlayer.pause(); // 暂停视频
+                });
+              </script>
+            </div>
+            <div class="video-overlay"></div>
+            <!-- 遮罩层 -->
+
+            <video
+              src="../../assets/video/show-reel-cut.mp4"
+              autoplay
+              muted
+              playsinline
+              loop
+              id="video-preview"
+            ></video>
+          </div>
+          <div class="caption">由我制作的产品宣传视频（2021）</div>
+          <p style="margin-top: 16px; margin-bottom: 40px">
+            我在轻流担任高级体验设计师，工作内容几乎涵盖了设计的方方面，包括定性研究，原型设计，界面设计，可用性测试，体验度量与设计项目管理等。
+          </p>
+          <p style="margin-bottom: 40px">
+            我作为主设计师参与了轻流 4.0 的大升级，主要工作包括：
+          </p>
+        </section>
+        <!--
          门户引擎介绍分割线
        -->
-      <div class="chapter">
-        <div class="divider"></div>
-        <div class="text">Chapter 1</div>
-        <div class="divider"></div>
-      </div>
-      <h2>门户引擎</h2>
-      <p class="subtitle">从 0 到 1，打造驱动业务的全新功能引擎</p>
+        <div class="chapter">
+          <div class="divider"></div>
+          <div class="text">Chapter 1</div>
+          <div class="divider"></div>
+        </div>
+        <section class="toc" id="portal-engine">
+          <!-- <a class="anchor" id="portal-engine"></a> -->
+          <h2>门户引擎</h2>
+          <p class="subtitle">从 0 到 1，打造驱动业务的全新功能引擎</p>
 
-      <video
-        src="../../assets/video/portal-video.mp4"
-        autoplay
-        muted
-        playsinline
-        loop
-        id="portal-video"
-      ></video>
+          <video
+            src="../../assets/video/portal-video.mp4"
+            autoplay
+            muted
+            playsinline
+            loop
+            id="portal-video"
+          ></video>
 
-      <!--
+          <!--
          段落分割线
        -->
-      <p>
-        一个完整的业务系统，不仅要有完善的数据管理与流程管理，还需要考虑到如何让终端用户方便使用。「门户」便承担了这个定位如何满足各类信息整合场景，作为业务的统一入口，串联相关的业务流程。
-      </p>
-      <div class="subtitle_small" style="margin-top: 40px">核心问题</div>
-      <h3>内部信息分发渠道杂乱，重点业务信息未能集中展示</h3>
-      <p>
-        随着客户对平台使用程度的加深，内部信息的有效聚合成为越来越多的客户提起的需求。对此，我们访谈了多位不同行业的客户，最终发现<span
-          class="highlight"
-          >「业务的统一入口」</span
-        >是一个非常共性的需求。
-      </p>
-      <!--
+          <p>
+            一个完整的业务系统，不仅要有完善的数据管理与流程管理，还需要考虑到如何让终端用户方便使用。「门户」便承担了这个定位如何满足各类信息整合场景，作为业务的统一入口，串联相关的业务流程。
+          </p>
+          <div class="subtitle_small" style="margin-top: 40px">核心问题</div>
+          <h3>内部信息分发渠道杂乱，重点业务信息未能集中展示</h3>
+          <p>
+            随着客户对平台使用程度的加深，内部信息的有效聚合成为越来越多的客户提起的需求。对此，我们访谈了多位不同行业的客户，最终发现<span
+              class="highlight"
+              >「业务的统一入口」</span
+            >是一个非常共性的需求。
+          </p>
+          <!--
          段落分割线
        -->
-      <img
-        src="../../assets/img/qingflow/portal-research.png"
-        alt="portal-research"
-      />
-      <div class="caption">问题定义的调研结果（部分）</div>
+          <img
+            src="../../assets/img/qingflow/portal-research.png"
+            alt="portal-research"
+          />
+          <div class="caption">问题定义的调研结果（部分）</div>
 
-      <div class="subtitle_small" style="margin-top: 40px">设想</div>
-      <h3>一个页面串联所有</h3>
-      <p>
-        我们对「门户引擎」的设想，是通过无代码的方式搭建企业或个人处理业务的统一入口。它既可以作为业务系统的首页，也可以作为频繁访问的常用页面，也可以对外分发作为供外部人员使用的页面，并结合权限体系，实现「千人千面」的效果。
-      </p>
-      <!--
+          <div class="subtitle_small" style="margin-top: 40px">设想</div>
+          <h3>一个页面串联所有</h3>
+          <p>
+            我们对「门户引擎」的设想，是通过无代码的方式搭建企业或个人处理业务的统一入口。它既可以作为业务系统的首页，也可以作为频繁访问的常用页面，也可以对外分发作为供外部人员使用的页面，并结合权限体系，实现「千人千面」的效果。
+          </p>
+          <!--
          段落分割线
        -->
-      <!-- <h3 style="margin-top: 40px">设计目标聚焦</h3>
+          <!-- <h3 style="margin-top: 40px">设计目标聚焦</h3>
       <p>
         以我们的设想为依据，我们提出了如下的设计目标：
         <span class="highlight">操作简单，布局灵活，场景通用，千人千面，</span>
         为此我和团队进行了许多信息收集，用户访谈与竞品调研的工作。
       </p> -->
-      <!--
+          <!--
          段落分割线
        -->
-      <div class="subtitle_small" style="margin-top: 40px">目标：场景通用</div>
-      <h3>挑战：抽象出最通用的搭建组件</h3>
-      <p>
-        我们需要选择对于门户来说必不可少的页面元素，并把这些元素与其代表的功能抽象成搭建组件。通过调研与走访，我们最终选择了宫格组件，轮播组件，链接组件，报表组件，筛选组件与文本组件作为第一批实装的组件。
-      </p>
-      <!--
+          <div class="subtitle_small" style="margin-top: 40px">
+            目标：场景通用
+          </div>
+          <h3>挑战：抽象出最通用的搭建组件</h3>
+          <p>
+            我们需要选择对于门户来说必不可少的页面元素，并把这些元素与其代表的功能抽象成搭建组件。通过调研与走访，我们最终选择了宫格组件，轮播组件，链接组件，报表组件，筛选组件与文本组件作为第一批实装的组件。
+          </p>
+          <!--
          段落分割线
        -->
-      <div class="subtitle_small" style="margin-top: 40px">目标：千人千面</div>
-      <h3>挑战：设计直观与复杂兼顾的界面布局</h3>
-      <p>
-        要想实现千人千面，门户的配置则必须要丰富，而我们希望在功能的丰富同时，也保证界面的简洁与直观。我和设计师
-        <span class="people">@周凌超</span>
-        一起探索方案，最终得到了兼顾配置组件与主题样式与功能的门户配置布局。
-      </p>
-      <img
-        src="../../assets/img/qingflow/portal-layout-draft.png"
-        alt="portal-layout-draft"
-      />
-      <div class="caption" style="margin-bottom: 16px">
-        早期布局呈现，较为简陋
-      </div>
-      <img
-        src="../../assets/img/qingflow/portal-layout-final.png"
-        alt="portal-layout-final"
-      />
-      <div class="caption">最终演变的方案，包含了主题选择与功能配置等功能</div>
-      <!--
+          <div class="subtitle_small" style="margin-top: 40px">
+            目标：千人千面
+          </div>
+          <h3>挑战：设计直观与复杂兼顾的界面布局</h3>
+          <p>
+            要想实现千人千面，门户的配置则必须要丰富，而我们希望在功能的丰富同时，也保证界面的简洁与直观。我和设计师
+            <span class="people">@周凌超</span>
+            一起探索方案，最终得到了兼顾配置组件与主题样式与功能的门户配置布局。
+          </p>
+          <img
+            src="../../assets/img/qingflow/portal-layout-draft.png"
+            alt="portal-layout-draft"
+          />
+          <div class="caption" style="margin-bottom: 16px">
+            早期布局呈现，较为简陋
+          </div>
+          <img
+            src="../../assets/img/qingflow/portal-layout-final.png"
+            alt="portal-layout-final"
+          />
+          <div class="caption">
+            最终演变的方案，包含了主题选择与功能配置等功能
+          </div>
+          <!--
          段落分割线
        -->
-      <div class="subtitle_small" style="margin-top: 40px">目标：布局灵活</div>
-      <h3>挑战：制定兼顾普适与灵活的栅格系统</h3>
-      <p>
-        门户的组件会在各种尺寸下呈现，我必须考虑到每一种复杂布局下的组件显示效果。为此，我需要制定一个兼顾普适与灵活的栅格系统，以满足各个组件在不同的尺寸下的显示效果。
-      </p>
-      <img src="../../assets/img/qingflow/portal-grid.png" alt="portal-grid" />
-      <div class="caption" style="margin-bottom: 16px">
-        制定门户的栅格系统规范
-      </div>
-      <img
-        src="../../assets/img/qingflow/portal-mobile.png"
-        alt="portal-layout-mobile"
-      />
-      <div class="caption" style="margin-bottom: 40px">
-        同时兼顾移动端的展示，带来了工作量成倍的增长
-      </div>
-      <p>
-        其中，宫格组件与待办组件这类形态多变的组件尤其复杂。我为此定下了详细的适配规则，保证组件在各种宽度下都有合理的显示效果。
-      </p>
-      <video
-        src="../../assets/img/qingflow/portal-app.mp4"
-        class="video"
-        autoplay
-        muted
-        playsinline
-        loop
-      ></video>
-      <div class="caption" style="margin-bottom: 16px">宫格组件的适配</div>
-      <video
-        src="../../assets/img/qingflow/portal-todo.mp4"
-        class="video"
-        autoplay
-        muted
-        playsinline
-        loop
-      ></video>
-      <div class="caption">待办组件的适配</div>
-      <!--
+          <div class="subtitle_small" style="margin-top: 40px">
+            目标：布局灵活
+          </div>
+          <h3>挑战：制定兼顾普适与灵活的栅格系统</h3>
+          <p>
+            门户的组件会在各种尺寸下呈现，我必须考虑到每一种复杂布局下的组件显示效果。为此，我需要制定一个兼顾普适与灵活的栅格系统，以满足各个组件在不同的尺寸下的显示效果。
+          </p>
+          <img
+            src="../../assets/img/qingflow/portal-grid.png"
+            alt="portal-grid"
+          />
+          <div class="caption" style="margin-bottom: 16px">
+            制定门户的栅格系统规范
+          </div>
+          <img
+            src="../../assets/img/qingflow/portal-mobile.png"
+            alt="portal-layout-mobile"
+          />
+          <div class="caption" style="margin-bottom: 40px">
+            同时兼顾移动端的展示，带来了工作量成倍的增长
+          </div>
+          <p>
+            其中，宫格组件与待办组件这类形态多变的组件尤其复杂。我为此定下了详细的适配规则，保证组件在各种宽度下都有合理的显示效果。
+          </p>
+          <video
+            src="../../assets/img/qingflow/portal-app.mp4"
+            class="video"
+            autoplay
+            muted
+            playsinline
+            loop
+          ></video>
+          <div class="caption" style="margin-bottom: 16px">宫格组件的适配</div>
+          <video
+            src="../../assets/img/qingflow/portal-todo.mp4"
+            class="video"
+            autoplay
+            muted
+            playsinline
+            loop
+          ></video>
+          <div class="caption">待办组件的适配</div>
+          <!--
          段落分割线
        -->
-      <div class="subtitle_small" style="margin-top: 40px">上线</div>
-      <h3>被用户的创造力惊叹</h3>
-      <p>
-        功能上线至今，「门户」已成为使用率名列前茅的重要板块，也是产品的重要卖点。我们也常常被客户使用门户搭建的一些优秀案例而惊叹。
-      </p>
-      <img
-        src="../../assets/img/qingflow/portal-case-1.png"
-        alt="portal-case-1"
-        style="margin-bottom: 8px"
-      />
+          <div class="subtitle_small" style="margin-top: 40px">上线</div>
+          <h3>被用户的创造力惊叹</h3>
+          <p>
+            功能上线至今，「门户」已成为使用率名列前茅的重要板块，也是产品的重要卖点。我们也常常被客户使用门户搭建的一些优秀案例而惊叹。
+          </p>
+          <img
+            src="../../assets/img/qingflow/portal-case-1.png"
+            alt="portal-case-1"
+            style="margin-bottom: 8px"
+          />
 
-      <img
-        src="../../assets/img/qingflow/portal-case-2.png"
-        alt="portal-case-2"
-        style="margin-bottom: 8px"
-      />
-      <img
-        src="../../assets/img/qingflow/portal-case-3.webp"
-        alt="portal-case-3"
-      />
-      <div class="caption" style="margin-bottom: 40px">客户的使用案例</div>
-      <p style="margin-bottom: 40px">
-        不论是从使用率还是从用户的搭建结果来看，「门户引擎」基本满足了我们最初的设想：<span
-          class="highlight"
-          >一个页面，串联所有。</span
-        >
-      </p>
-      <!--
+          <img
+            src="../../assets/img/qingflow/portal-case-2.png"
+            alt="portal-case-2"
+            style="margin-bottom: 8px"
+          />
+          <img
+            src="../../assets/img/qingflow/portal-case-3.webp"
+            alt="portal-case-3"
+          />
+          <div class="caption" style="margin-bottom: 40px">客户的使用案例</div>
+          <p style="margin-bottom: 40px">
+            不论是从使用率还是从用户的搭建结果来看，「门户引擎」基本满足了我们最初的设想：<span
+              class="highlight"
+              >一个页面，串联所有。</span
+            >
+          </p>
+        </section>
+        <!--
          轻流4.0 介绍分割线
        -->
-      <div class="chapter">
-        <div class="divider"></div>
-        <div class="text">Chapter 2</div>
-        <div class="divider"></div>
-      </div>
-      <h2>主导航改版</h2>
-      <p class="subtitle">更合理与灵活的布局</p>
+        <div class="chapter">
+          <div class="divider"></div>
+          <div class="text">Chapter 2</div>
+          <div class="divider"></div>
+        </div>
+        <section class="toc" id="new-nav">
+          <!-- <a class="anchor" id="new-nav"></a> -->
+          <h2>主导航改版</h2>
+          <p class="subtitle">更合理与灵活的布局</p>
 
-      <!-- <p>
+          <!-- <p>
         作为一款成熟的无代码产品，轻流当下的产品设计虽然久经考验，但却已经无法面向未来。我作为轻流4.0大改版的主设计师，参与定义了轻流的下一个阶段的设计形态。
       </p> -->
-      <!--
+          <!--
          段落分割线
        -->
-      <!-- <h3 style="margin-top: 40px">为什么需要改变</h3>
+          <!-- <h3 style="margin-top: 40px">为什么需要改变</h3>
 
       <p>
         <span class="highlight">1.更合理的空间布局</span
@@ -325,233 +403,248 @@
           >「灵活」、「效率」、「美观」</span
         >
       </p> -->
-      <!--
+          <!--
          段落分割线
        -->
-      <!-- <div class="subtitle_small" style="margin-top: 40px">
+          <!-- <div class="subtitle_small" style="margin-top: 40px">
         更合理的空间布局
       </div>
       <h3>从最高频使用的功能入手：主导航</h3> -->
-      <p>
-        对轻流这款较为复杂的产品来说，在不同的界面中频繁跳转是用户的日常。而主导航作为产品的「主要路标」，它对于帮助用户便捷使用产品的重要性再多强调也不为过。
-      </p>
-      <img src="../../assets/img/qingflow/old-UI.jpg" alt="Old UI" />
-      <div class="caption" style="margin-bottom: 16px">旧版首页主界面</div>
-      <p>
-        我从「灵活」、「效率」、「美观」这三个改版视角，重新审视了我们当下的导航系统。<br />
-      </p>
-      <p>
-        <span class="highlight">灵活：</span
-        >我们希望将设计主导航内容的权利交给用户，而我们当下的导航方案并没有留下可拓展的自定义空间。<br />
-      </p>
-      <p>
-        <span class="highlight">效率：</span
-        >当下的导航设计在操作效率和信息展示效率上都不尽如人意。<br />
-      </p>
-      <p style="margin-bottom: 40px">
-        <span class="highlight">美观：</span>导航的陈旧设计，不规范的 Icon
-        使用等等，都是亟待解决的视觉问题。
-      </p>
-      <h4>方案探索</h4>
+          <p>
+            对轻流这款较为复杂的产品来说，在不同的界面中频繁跳转是用户的日常。而主导航作为产品的「主要路标」，它对于帮助用户便捷使用产品的重要性再多强调也不为过。
+          </p>
+          <img src="../../assets/img/qingflow/old-UI.jpg" alt="Old UI" />
+          <div class="caption" style="margin-bottom: 16px">旧版首页主界面</div>
+          <p>
+            我从「灵活」、「效率」、「美观」这三个改版视角，重新审视了我们当下的导航系统。<br />
+          </p>
+          <p>
+            <span class="highlight">灵活：</span
+            >我们希望将设计主导航内容的权利交给用户，而我们当下的导航方案并没有留下可拓展的自定义空间。<br />
+          </p>
+          <p>
+            <span class="highlight">效率：</span
+            >当下的导航设计在操作效率和信息展示效率上都不尽如人意。<br />
+          </p>
+          <p style="margin-bottom: 40px">
+            <span class="highlight">美观：</span>导航的陈旧设计，不规范的 Icon
+            使用等等，都是亟待解决的视觉问题。
+          </p>
+          <h4>方案探索</h4>
 
-      <p>
-        我产出了多种设计方案，其中不乏较为挑战用户习惯的尝试。因为此次界面的布局改动较大，影响的范围较广，我与产品经理一起合作开展了可用性测试，用户访谈，问卷等多种调研手段。对我们的探索方向给予修正。
-      </p>
-      <img
-        src="../../assets/img/qingflow/4.0-test-cover.png"
-        alt="User test screenshot"
-      />
-      <p class="caption">原型测试邀请</p>
-      <p>
-        我们与多位用户进行一对一的原型测试，将每一个方案都交由用户自己操作，我们通过观察和简单的提问，确认界面上的信息是否准确无误传达给用户，用户是否遇到操作上的障碍等等。
-      </p>
-      <img
-        src="../../assets/img/qingflow/4.0-test-iteration.png"
-        alt="Design iteration"
-      />
-      <p class="caption">方案尝试与探索（部分）</p>
-      <img
-        src="../../assets/img/qingflow/4.0-prototype.png"
-        alt="Design prototype"
-      />
-      <p class="caption">早期的交互原型之一，我们使用它和真实的用户进行交流</p>
-      <img
-        src="../../assets/img/qingflow/4.0-research-result.png"
-        alt="Design research"
-      />
-      <p class="caption">调研结果记录（部分）</p>
-      <img
-        src="../../assets/img/qingflow/4.0-research-doc.png"
-        alt="Design research doc"
-      />
-      <p class="caption">调研结果记录（部分）</p>
-      <h4 style="margin-top: 40px">最终呈现</h4>
-      <img src="../../assets/img/qingflow/old-UI.jpg" alt="Old UI" />
-      <div class="caption" style="margin-bottom: 16px">Before</div>
-      <video
-        src="../../assets/img/qingflow/new-UI-Demo.mp4"
-        autoplay
-        muted
-        playsinline
-        loop
-        class="video"
-      ></video>
-      <div class="caption" style="margin-bottom: 16px">After</div>
-      <p>
-        <span class="highlight">更直观，更高效</span><br />
-        新版导航栏新增了全局导航属性，常驻在左侧，我们还特地为高频的应用包切换操作增添了快捷操作，提供了更加专注且高效的办公体验。
-      </p>
-      <p>
-        <span class="highlight">更优的屏效</span><br />
-        此次改版中，我们将所有导航内容都聚集在左侧，省下了原先的顶部空间。此外我们还特别设计了展开和收起两种状态，用户可以根据自己的需要灵活选择。
-      </p>
-      <p>
-        <span class="highlight">更美观</span><br />
-        我们为每一个导航类目重绘了图标，调整了间距节奏。
-      </p>
-      <img src="../../assets/img/qingflow/4.0-new-nav.png" alt="" />
-      <p class="caption">新版主导航</p>
-      <img src="../../assets/img/qingflow/4.0-nav-customize.png" alt="" />
-      <p class="caption">
-        我们设计了主导航自定义功能，用户可自由定义呈现的内容多少
-      </p>
-      <h4 style="margin-top: 40px">方案上线</h4>
-      <p>
-        在全新的主导航上线后，我们依然提供了旧版导航的入口，为用户预留充足的适应时间，不冒然向用户推出一个全新的陌生界面，同时也为我们提供了一个打磨方案的窗口期。
-      </p>
+          <p>
+            我产出了多种设计方案，其中不乏较为挑战用户习惯的尝试。因为此次界面的布局改动较大，影响的范围较广，我与产品经理一起合作开展了可用性测试，用户访谈，问卷等多种调研手段。对我们的探索方向给予修正。
+          </p>
+          <img
+            src="../../assets/img/qingflow/4.0-test-cover.png"
+            alt="User test screenshot"
+          />
+          <p class="caption">原型测试邀请</p>
+          <p>
+            我们与多位用户进行一对一的原型测试，将每一个方案都交由用户自己操作，我们通过观察和简单的提问，确认界面上的信息是否准确无误传达给用户，用户是否遇到操作上的障碍等等。
+          </p>
+          <img
+            src="../../assets/img/qingflow/4.0-test-iteration.png"
+            alt="Design iteration"
+          />
+          <p class="caption">方案尝试与探索（部分）</p>
+          <img
+            src="../../assets/img/qingflow/4.0-prototype.png"
+            alt="Design prototype"
+          />
+          <p class="caption">
+            早期的交互原型之一，我们使用它和真实的用户进行交流
+          </p>
+          <img
+            src="../../assets/img/qingflow/4.0-research-result.png"
+            alt="Design research"
+          />
+          <p class="caption">调研结果记录（部分）</p>
+          <img
+            src="../../assets/img/qingflow/4.0-research-doc.png"
+            alt="Design research doc"
+          />
+          <p class="caption">调研结果记录（部分）</p>
+          <h4 style="margin-top: 40px">最终呈现</h4>
+          <img src="../../assets/img/qingflow/old-UI.jpg" alt="Old UI" />
+          <div class="caption" style="margin-bottom: 16px">Before</div>
+          <video
+            src="../../assets/img/qingflow/new-UI-Demo.mp4"
+            autoplay
+            muted
+            playsinline
+            loop
+            class="video"
+          ></video>
+          <div class="caption" style="margin-bottom: 16px">After</div>
+          <p>
+            <span class="highlight">更直观，更高效</span><br />
+            新版导航栏新增了全局导航属性，常驻在左侧，我们还特地为高频的应用包切换操作增添了快捷操作，提供了更加专注且高效的办公体验。
+          </p>
+          <p>
+            <span class="highlight">更优的屏效</span><br />
+            此次改版中，我们将所有导航内容都聚集在左侧，省下了原先的顶部空间。此外我们还特别设计了展开和收起两种状态，用户可以根据自己的需要灵活选择。
+          </p>
+          <p>
+            <span class="highlight">更美观</span><br />
+            我们为每一个导航类目重绘了图标，调整了间距节奏。
+          </p>
+          <img src="../../assets/img/qingflow/4.0-new-nav.png" alt="" />
+          <p class="caption">新版主导航</p>
+          <img src="../../assets/img/qingflow/4.0-nav-customize.png" alt="" />
+          <p class="caption">
+            我们设计了主导航自定义功能，用户可自由定义呈现的内容多少
+          </p>
+          <h4 style="margin-top: 40px">方案上线</h4>
+          <p>
+            在全新的主导航上线后，我们依然提供了旧版导航的入口，为用户预留充足的适应时间，不冒然向用户推出一个全新的陌生界面，同时也为我们提供了一个打磨方案的窗口期。
+          </p>
 
-      <p>
-        令我们欣喜的是，在新的界面上线后，绝大部分用户最终都选择了新的界面。随着时间的推移，我们已经完全下线了旧版设计，用户已经<span
-          class="highlight"
-          >完全接受</span
-        >我们的新方案了。
-      </p>
-      <!--
+          <p>
+            令我们欣喜的是，在新的界面上线后，绝大部分用户最终都选择了新的界面。随着时间的推移，我们已经完全下线了旧版设计，用户已经<span
+              class="highlight"
+              >完全接受</span
+            >我们的新方案了。
+          </p>
+          <!--
          段落分割线
        -->
-      <div class="subtitle_small" style="margin-top: 40px">
-        更合理的空间布局
-      </div>
-      <h3>优化信息展示效率</h3>
-      <p>
-        在原先的界面中，有一些信息展示效率的问题被人诟病。在设计改版过程中，我们持续有多位用户进行访谈，了解他们对页面布局的看法。优化后的界面布局让数据的有效显示区域有了显著的提升。
-      </p>
-      <video
-        src="../../assets/img/qingflow/4.0-layout.mp4"
-        autoplay
-        muted
-        playsinline
-        loop
-        class="video"
-      ></video>
-      <div class="caption">新旧版的布局对比，效果显著</div>
-      <div class="chapter">
-        <div class="divider"></div>
-        <div class="text">Chapter 3</div>
-        <div class="divider"></div>
-      </div>
-      <h2>全新的视图功能</h2>
-      <p class="subtitle">数据功能升级</p>
-      <p style="margin-bottom: 40px">
-        在4.0版本中，我们计划对数据引擎进行了大改造。为了丰富用户查看、使用数据的方式，我们让数据引擎支持展示用户自由配置的多种视图，丰富页面的自定义拓展性。
-      </p>
+          <div class="subtitle_small" style="margin-top: 40px">
+            更合理的空间布局
+          </div>
+          <h3>优化信息展示效率</h3>
+          <p>
+            在原先的界面中，有一些信息展示效率的问题被人诟病。在设计改版过程中，我们持续有多位用户进行访谈，了解他们对页面布局的看法。优化后的界面布局让数据的有效显示区域有了显著的提升。
+          </p>
+          <video
+            src="../../assets/img/qingflow/4.0-layout.mp4"
+            autoplay
+            muted
+            playsinline
+            loop
+            class="video"
+          ></video>
+          <div class="caption">新旧版的布局对比，效果显著</div>
+          <div class="chapter">
+            <div class="divider"></div>
+            <div class="text">Chapter 3</div>
+            <div class="divider"></div>
+          </div>
+        </section>
+        <section class="toc" id="new-view">
+          <!-- <a class="anchor" id="new-view"></a> -->
+          <h2>全新的视图功能</h2>
+          <p class="subtitle">数据功能升级</p>
+          <p style="margin-bottom: 40px">
+            在4.0版本中，我们计划对数据引擎进行了大改造。为了丰富用户查看、使用数据的方式，我们让数据引擎支持展示用户自由配置的多种视图，丰富页面的自定义拓展性。
+          </p>
 
-      <h4>丰富的视图类型</h4>
-      <p>
-        我设计了轻流的表格视图，卡片视图，看板视图和甘特视图。这些不同的视图丰富了数据的展示方式，适用于不同的场景，大大丰富了轻流的系统搭建能力。每个视图的交互和展示方式都各不相同，探索交互的过程对我来说是一个非常有趣的过程
-      </p>
-      <div class="highlight" style="margin-bottom: 8px">卡片视图</div>
-      <video
-        src="../../assets/img/qingflow/view-card.mp4"
-        autoplay
-        muted
-        playsinline
-        loop
-        class="video"
-      ></video>
-      <div class="caption" style="margin-bottom: 40px">
-        使用卡片的样式展示数据
-      </div>
-      <div class="highlight" style="margin-bottom: 8px">看板视图</div>
-      <img src="../../assets/img/qingflow/view-kanban.png" alt="" />
-      <div class="caption" style="margin-bottom: 40px">
-        看板视图，将卡片分组展示
-      </div>
-      <div class="highlight" style="margin-bottom: 8px">甘特视图</div>
-      <img src="../../assets/img/qingflow/view-gantt.png" alt="" />
-      <div class="caption" style="margin-bottom: 40px">
-        甘特视图，多用于项目管理
-      </div>
-      <p>
-        我们将全部视图收纳在抽屉之中，也允许用户将高频使用的视图以页签的形式固定在顶部，并且可以自由决定展示顺序，这样用户就拥有了灵活自定义数据引擎页面的能力。
-      </p>
-      <video
-        src="../../assets/img/qingflow/view-nav.mp4"
-        autoplay
-        muted
-        playsinline
-        loop
-        class="video"
-      ></video>
-      <div class="caption" style="margin-bottom: 40px">视图的切换与排序</div>
-      <h4>灵活的配置项</h4>
-      <p>
-        设计视图的一个难点是各个不同视图的配置项。如何将表单字段数据映射成迥异的数据展示形态？各个不同的视图配置使用了丰富的交互组件。
-      </p>
-      <img src="../../assets/img/qingflow/view-settings.png" alt="" />
-      <div class="caption" style="margin-bottom: 40px">
-        不同的视图配置项（部分）
-      </div>
-      <h3>逐步实现愿景</h3>
-      <p>
-        轻流 4.0
-        作为一段时间以来产品形态最大的改变，在「灵活」、「效率」、「美观」这三个维度都获得了长足的进步。
-        不论是界面布局的优化，还是视图功能的上线，都获得了很好的反响，对业务的驱动效果显著。作为主设计师参加这样一个大的设计改版项目，虽然面临了诸多挑战，但收获也颇丰。
-      </p>
-      <video
-        src="../../assets/img/qingflow/4.0-WorkOS.mp4"
-        autoplay
-        muted
-        playsinline
-        loop
-        class="video workOS"
-        style="margin-bottom: 16px"
-      ></video>
-      <!--
+          <h4>丰富的视图类型</h4>
+          <p>
+            我设计了轻流的表格视图，卡片视图，看板视图和甘特视图。这些不同的视图丰富了数据的展示方式，适用于不同的场景，大大丰富了轻流的系统搭建能力。每个视图的交互和展示方式都各不相同，探索交互的过程对我来说是一个非常有趣的过程
+          </p>
+          <div class="highlight" style="margin-bottom: 8px">卡片视图</div>
+          <video
+            src="../../assets/img/qingflow/view-card.mp4"
+            autoplay
+            muted
+            playsinline
+            loop
+            class="video"
+          ></video>
+          <div class="caption" style="margin-bottom: 40px">
+            使用卡片的样式展示数据
+          </div>
+          <div class="highlight" style="margin-bottom: 8px">看板视图</div>
+          <img src="../../assets/img/qingflow/view-kanban.png" alt="" />
+          <div class="caption" style="margin-bottom: 40px">
+            看板视图，将卡片分组展示
+          </div>
+          <div class="highlight" style="margin-bottom: 8px">甘特视图</div>
+          <img src="../../assets/img/qingflow/view-gantt.png" alt="" />
+          <div class="caption" style="margin-bottom: 40px">
+            甘特视图，多用于项目管理
+          </div>
+          <p>
+            我们将全部视图收纳在抽屉之中，也允许用户将高频使用的视图以页签的形式固定在顶部，并且可以自由决定展示顺序，这样用户就拥有了灵活自定义数据引擎页面的能力。
+          </p>
+          <video
+            src="../../assets/img/qingflow/view-nav.mp4"
+            autoplay
+            muted
+            playsinline
+            loop
+            class="video"
+          ></video>
+          <div class="caption" style="margin-bottom: 40px">
+            视图的切换与排序
+          </div>
+          <h4>灵活的配置项</h4>
+          <p>
+            设计视图的一个难点是各个不同视图的配置项。如何将表单字段数据映射成迥异的数据展示形态？各个不同的视图配置使用了丰富的交互组件。
+          </p>
+          <img src="../../assets/img/qingflow/view-settings.png" alt="" />
+          <div class="caption" style="margin-bottom: 40px">
+            不同的视图配置项（部分）
+          </div>
+          <h3>逐步实现愿景</h3>
+          <p>
+            轻流 4.0
+            作为一段时间以来产品形态最大的改变，在「灵活」、「效率」、「美观」这三个维度都获得了长足的进步。
+            不论是界面布局的优化，还是视图功能的上线，都获得了很好的反响，对业务的驱动效果显著。作为主设计师参加这样一个大的设计改版项目，虽然面临了诸多挑战，但收获也颇丰。
+          </p>
+          <video
+            src="../../assets/img/qingflow/4.0-WorkOS.mp4"
+            autoplay
+            muted
+            playsinline
+            loop
+            class="video workOS"
+            style="margin-bottom: 16px"
+          ></video>
+        </section>
+        <!--
          品牌价值观
        -->
-      <div class="chapter">
-        <div class="divider"></div>
-        <div class="text">Chapter 4</div>
-        <div class="divider"></div>
-      </div>
-      <h2 style="margin-top: 40px">团队文化建设</h2>
-      <p class="subtitle">完善品牌定义</p>
-      <p>
-        设计师的影响力远远不仅仅只体现在设计方案之中。在方案之外，我还参与定义了公司品牌调性与价值观。
-      </p>
-      <p>
-        对许多设计师来说，品牌仅仅意味着一套视觉体系，但品牌的含义远不止于此。在我加入轻流时，公司还未系统梳理整理过自己的品牌价值观，我借此机会组织了一次<span
-          class="highlight"
-          >跨部门的品牌冲刺 Workshop,</span
-        >
-        与公司几乎所有部门的代表一起，共同提炼出得到大家共识的品牌价值观。
-      </p>
-      <img src="../../assets/img/qingflow/brand-sprint-1.jpg" alt="" />
-      <p class="caption">我在主持 Workshop</p>
-      <img src="../../assets/img/qingflow/brand-sprint-2.jpg" alt="" />
-      <p class="caption">大家积极参与活动</p>
-      <img src="../../assets/img/qingflow/brand-sprint-4.jpg" alt="" />
-      <p class="caption">每个人都会发表自己对品牌的看法</p>
-      <img src="../../assets/img/qingflow/brand-sprint-outcome.jpg" alt="" />
-      <p class="caption">将产出做总结并电子化存档</p>
-      <p style="margin-top: 40px">
-        以上是我在轻流的设计故事，这是一段在有爱的团队成长非常快的时光。更多有趣的经历与细节无法在此展开，但我愿意随时与你分享，感谢你阅读到这里。：）
-      </p>
-      <div class="chapter">
-        <div class="divider"></div>
-        <div class="text">End</div>
-        <div class="divider"></div>
+        <div class="chapter">
+          <div class="divider"></div>
+          <div class="text">Chapter 4</div>
+          <div class="divider"></div>
+        </div>
+        <section class="toc" id="team-culture">
+          <!-- <a class="anchor" id="team-culture"></a> -->
+          <h2 style="margin-top: 40px">团队文化建设</h2>
+          <p class="subtitle">完善品牌定义</p>
+          <p>
+            设计师的影响力远远不仅仅只体现在设计方案之中。在方案之外，我还参与定义了公司品牌调性与价值观。
+          </p>
+          <p>
+            对许多设计师来说，品牌仅仅意味着一套视觉体系，但品牌的含义远不止于此。在我加入轻流时，公司还未系统梳理整理过自己的品牌价值观，我借此机会组织了一次<span
+              class="highlight"
+              >跨部门的品牌冲刺 Workshop,</span
+            >
+            与公司几乎所有部门的代表一起，共同提炼出得到大家共识的品牌价值观。
+          </p>
+          <img src="../../assets/img/qingflow/brand-sprint-1.jpg" alt="" />
+          <p class="caption">我在主持 Workshop</p>
+          <img src="../../assets/img/qingflow/brand-sprint-2.jpg" alt="" />
+          <p class="caption">大家积极参与活动</p>
+          <img src="../../assets/img/qingflow/brand-sprint-4.jpg" alt="" />
+          <p class="caption">每个人都会发表自己对品牌的看法</p>
+          <img
+            src="../../assets/img/qingflow/brand-sprint-outcome.jpg"
+            alt=""
+          />
+          <p class="caption">将产出做总结并电子化存档</p>
+          <p style="margin-top: 40px">
+            以上是我在轻流的设计故事，这是一段在有爱的团队成长非常快的时光。更多有趣的经历与细节无法在此展开，但我愿意随时与你分享，感谢你阅读到这里。：）
+          </p>
+        </section>
+        <div class="chapter">
+          <div class="divider"></div>
+          <div class="text">End</div>
+          <div class="divider"></div>
+        </div>
       </div>
     </div>
     <!-- Vercel Analytics -->
@@ -565,3 +658,10 @@
     <script defer src="/_vercel/insights/script.js"></script>
   </body>
 </html>
+
+<!-- 
+<div class="main">
+  <div class="side"></div>
+  <div class="main-content"></div>
+</div>
+ -->

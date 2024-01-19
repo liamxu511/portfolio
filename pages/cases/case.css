@@ -94,6 +94,10 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
+html {
+  scroll-behavior: smooth;
+}
 /* Remove link's underline */
 a {
   text-decoration: none;
@@ -140,6 +144,10 @@ body {
   font-family: "Inter", PingFang SC, Hiragino Sans GB, Microsoft YaHei UI,
     Microsoft YaHei, Source Han Sans CN, sans-serif;
   color: var(--font-color);
+  margin: 0 auto;
+  /* padding: 64px 64px; */
+  max-width: 1200px;
+  position: relative;
 }
 
 /* Setting text style */
@@ -241,25 +249,33 @@ p {
 }
 /* Header Style */
 .header {
+  /* grid-column-start: 1;
+  grid-column-end: 7; */
   display: flex;
   justify-content: center; /* 水平居中 */
-  align-items: center;
+  /* align-items: center; */
   position: fixed;
   top: 0;
-  background-color: rgb(255, 255, 255);
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
   height: 68px;
-  width: 100%;
+  /* max-width: 1200px; */
   z-index: 99;
+  padding: 0 16px;
 }
 
 .header-content {
+  /* position: fixed; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 800px;
-  padding: 0px 24px 0px 24px;
+  max-width: 1200px;
+
+  /* margin-left: 24px; */
   margin: auto;
   width: 100%;
+  /* background-color: blue; */
 }
 
 /* Button Style */
@@ -293,9 +309,13 @@ p {
 
 /* Main content style */
 .main-content {
-  max-width: 680px;
-  margin: 108px auto 80px auto;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  /* max-width: 680px; */
+  margin: 68px auto 80px auto;
   padding: 0 24px;
+
+  /* flex: 1; */
 }
 
 .title {
@@ -386,3 +406,69 @@ img,
 }
 
 /* 样式可根据需要进行自定义 */
+
+.main {
+  /* max-width: 848px; */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 40px;
+  /* gap: 40px; */
+  /* background-color: aliceblue; */
+  /* position: relative; */
+}
+
+/* 文章目录样式 */
+.side {
+  grid-column-start: 6;
+  grid-column-end: 7;
+
+  /* position: fixed; */
+}
+
+#toc {
+  position: fixed;
+  top: 108px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.toc-title {
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.toc-item {
+  color: var(--gray-30);
+}
+
+.toc-item:hover {
+  color: var(--theme-60);
+}
+
+/* Scroll indicator style */
+
+.active {
+  color: var(--theme-60);
+}
+
+/* Anchor jump offsets */
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -108px;
+  visibility: hidden;
+}
+
+/* ————————————responsive—————————— */
+@media (max-width: 900px) {
+  .side {
+    display: none;
+  }
+  .main-content {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    margin-top: 108px;
+  }
+}
