@@ -307,6 +307,7 @@ p {
   background-color: var(--gray-05);
 }
 
+
 /* Main content style */
 .main-content {
   grid-column-start: 2;
@@ -317,6 +318,53 @@ p {
 
   /* flex: 1; */
 }
+
+/* Project result */
+.case_brief {
+  /* width: 100%; */
+  background-color: var(--gray-05);
+  padding: 16px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+}
+
+.case_brief .brief_title {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.number {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.metric_list {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  justify-content: space-around;
+}
+
+.metric {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.metric .lable {
+  color: var(--gray-30);
+}
+
+/* .hero {
+  width: 100dvw;
+  height: 60px;
+  background-color: #9a9daf;
+} */
 
 .title {
   margin-bottom: 40px;
